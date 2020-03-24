@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DD2A977242A0330004E4E38 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DD2A976242A0330004E4E38 /* Localizable.strings */; };
+		2DD2A981242A0700004E4E38 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2A97B242A0700004E4E38 /* BaseViewController.swift */; };
+		2DD2A982242A0700004E4E38 /* BaseModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2A97C242A0700004E4E38 /* BaseModelProtocol.swift */; };
+		2DD2A983242A0701004E4E38 /* BasePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2A97D242A0700004E4E38 /* BasePresenterProtocol.swift */; };
+		2DD2A984242A0701004E4E38 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2A97E242A0700004E4E38 /* BaseModel.swift */; };
+		2DD2A985242A0701004E4E38 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2A97F242A0700004E4E38 /* BasePresenter.swift */; };
+		2DD2A986242A0701004E4E38 /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2A980242A0700004E4E38 /* BaseViewProtocol.swift */; };
 		2DD8281024299158004F2738 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD8280F24299158004F2738 /* AppDelegate.swift */; };
 		2DD8281224299158004F2738 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD8281124299158004F2738 /* SceneDelegate.swift */; };
 		2DD8281424299158004F2738 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD8281324299158004F2738 /* ViewController.swift */; };
@@ -16,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2DD2A976242A0330004E4E38 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		2DD2A97B242A0700004E4E38 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2DD2A97C242A0700004E4E38 /* BaseModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModelProtocol.swift; sourceTree = "<group>"; };
+		2DD2A97D242A0700004E4E38 /* BasePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenterProtocol.swift; sourceTree = "<group>"; };
+		2DD2A97E242A0700004E4E38 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		2DD2A97F242A0700004E4E38 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		2DD2A980242A0700004E4E38 /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
 		2DD8280C24299158004F2738 /* Channels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Channels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD8280F24299158004F2738 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DD8281124299158004F2738 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +51,150 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DD2A972242A0235004E4E38 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2DD2A975242A0292004E4E38 /* Localization */,
+				2DD2A974242A0289004E4E38 /* Assets */,
+				2DD2A973242A027E004E4E38 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2DD2A973242A027E004E4E38 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		2DD2A974242A0289004E4E38 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2DD8281824299159004F2738 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		2DD2A975242A0292004E4E38 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				2DD2A976242A0330004E4E38 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		2DD2A979242A0691004E4E38 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2DD8280F24299158004F2738 /* AppDelegate.swift */,
+				2DD8281124299158004F2738 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2DD2A97A242A06D3004E4E38 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2DD2A97B242A0700004E4E38 /* BaseViewController.swift */,
+				2DD2A97C242A0700004E4E38 /* BaseModelProtocol.swift */,
+				2DD2A97D242A0700004E4E38 /* BasePresenterProtocol.swift */,
+				2DD2A97E242A0700004E4E38 /* BaseModel.swift */,
+				2DD2A97F242A0700004E4E38 /* BasePresenter.swift */,
+				2DD2A980242A0700004E4E38 /* BaseViewProtocol.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2DD2A987242A072D004E4E38 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		2DD2A988242A073C004E4E38 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2DD2A989242A0754004E4E38 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2DD8281A24299159004F2738 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2DD2A98A242A0785004E4E38 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2DD8281D24299159004F2738 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		2DD2A98B242A09F1004E4E38 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2DD2A98C242A0A17004E4E38 /* Sences */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sences;
+			sourceTree = "<group>";
+		};
+		2DD2A98D242A0ABA004E4E38 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				2DD2A992242A0C29004E4E38 /* Container */,
+				2DD2A991242A0BD9004E4E38 /* AppManager */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		2DD2A98E242A0B00004E4E38 /* Componants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Componants;
+			sourceTree = "<group>";
+		};
+		2DD2A98F242A0B50004E4E38 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2DD2A990242A0B84004E4E38 /* Constants */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2DD2A990242A0B84004E4E38 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		2DD2A991242A0BD9004E4E38 /* AppManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppManager;
+			sourceTree = "<group>";
+		};
+		2DD2A992242A0C29004E4E38 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
 		2DD8280324299158004F2738 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +214,20 @@
 		2DD8280E24299158004F2738 /* Channels */ = {
 			isa = PBXGroup;
 			children = (
-				2DD8280F24299158004F2738 /* AppDelegate.swift */,
-				2DD8281124299158004F2738 /* SceneDelegate.swift */,
+				2DD2A98F242A0B50004E4E38 /* Helpers */,
+				2DD2A98E242A0B00004E4E38 /* Componants */,
+				2DD2A98D242A0ABA004E4E38 /* Coordinators */,
+				2DD2A98C242A0A17004E4E38 /* Sences */,
+				2DD2A98B242A09F1004E4E38 /* Networking */,
+				2DD2A98A242A0785004E4E38 /* SupportingFiles */,
+				2DD2A989242A0754004E4E38 /* UI */,
+				2DD2A988242A073C004E4E38 /* Extensions */,
+				2DD2A987242A072D004E4E38 /* Entity */,
+				2DD2A97A242A06D3004E4E38 /* Base */,
+				2DD2A979242A0691004E4E38 /* AppDelegate */,
+				2DD2A972242A0235004E4E38 /* Resources */,
 				2DD8281324299158004F2738 /* ViewController.swift */,
 				2DD8281524299158004F2738 /* Main.storyboard */,
-				2DD8281824299159004F2738 /* Assets.xcassets */,
-				2DD8281A24299159004F2738 /* LaunchScreen.storyboard */,
-				2DD8281D24299159004F2738 /* Info.plist */,
 			);
 			path = Channels;
 			sourceTree = "<group>";
@@ -77,6 +242,7 @@
 				2DD8280824299158004F2738 /* Sources */,
 				2DD8280924299158004F2738 /* Frameworks */,
 				2DD8280A24299158004F2738 /* Resources */,
+				2DD2A9712429F976004E4E38 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -126,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DD8281C24299159004F2738 /* LaunchScreen.storyboard in Resources */,
+				2DD2A977242A0330004E4E38 /* Localizable.strings in Resources */,
 				2DD8281924299159004F2738 /* Assets.xcassets in Resources */,
 				2DD8281724299158004F2738 /* Main.storyboard in Resources */,
 			);
@@ -133,13 +300,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2DD2A9712429F976004E4E38 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n   echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2DD8280824299158004F2738 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2DD8281424299158004F2738 /* ViewController.swift in Sources */,
+				2DD2A985242A0701004E4E38 /* BasePresenter.swift in Sources */,
+				2DD2A983242A0701004E4E38 /* BasePresenterProtocol.swift in Sources */,
+				2DD2A984242A0701004E4E38 /* BaseModel.swift in Sources */,
+				2DD2A981242A0700004E4E38 /* BaseViewController.swift in Sources */,
+				2DD2A986242A0701004E4E38 /* BaseViewProtocol.swift in Sources */,
 				2DD8281024299158004F2738 /* AppDelegate.swift in Sources */,
+				2DD2A982242A0700004E4E38 /* BaseModelProtocol.swift in Sources */,
 				2DD8281224299158004F2738 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,7 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Channels/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Channels/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +496,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Channels/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Channels/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

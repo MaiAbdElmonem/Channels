@@ -2,11 +2,11 @@ input_dir: Channels
 output_dir: Channels
 strings:
   inputs:
-    - Resources/Localization/en.lproj/Localizable.strings
+    - Resources/Localization/Localizable.strings
   outputs:
-    templatePath: ./APPStringsTemplete.stencil
+    templateName: structured-swift4
     output: Resources/Localization/Localized.swift
-  fallback: Base
+  
 custom_rules:
   swiftgen_strings:
     name: "SwiftGen Strings"

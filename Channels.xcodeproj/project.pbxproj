@@ -17,6 +17,9 @@
 		2D78AC03242A267F0036C674 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D78AC02242A267F0036C674 /* NetworkError.swift */; };
 		2D78AC06242A26DE0036C674 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D78AC05242A26DE0036C674 /* Strings.swift */; };
 		2D78AC09242A2A3E0036C674 /* NavigationBar+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D78AC08242A2A3E0036C674 /* NavigationBar+Appearance.swift */; };
+		2D78AC0E242A39240036C674 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D78AC0D242A39240036C674 /* Assets.swift */; };
+		2D78AC10242A395B0036C674 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D78AC0F242A395B0036C674 /* Fonts.swift */; };
+		2D78AC12242A396F0036C674 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D78AC11242A396E0036C674 /* Localized.swift */; };
 		2DD2A977242A0330004E4E38 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DD2A976242A0330004E4E38 /* Localizable.strings */; };
 		2DD2A981242A0700004E4E38 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2A97B242A0700004E4E38 /* BaseViewController.swift */; };
 		2DD2A982242A0700004E4E38 /* BaseModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2A97C242A0700004E4E38 /* BaseModelProtocol.swift */; };
@@ -41,6 +44,9 @@
 		2D78AC02242A267F0036C674 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		2D78AC05242A26DE0036C674 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		2D78AC08242A2A3E0036C674 /* NavigationBar+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationBar+Appearance.swift"; sourceTree = "<group>"; };
+		2D78AC0D242A39240036C674 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		2D78AC0F242A395B0036C674 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		2D78AC11242A396E0036C674 /* Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
 		2DD2A976242A0330004E4E38 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		2DD2A97B242A0700004E4E38 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2DD2A97C242A0700004E4E38 /* BaseModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModelProtocol.swift; sourceTree = "<group>"; };
@@ -103,6 +109,7 @@
 		2DD2A973242A027E004E4E38 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				2D78AC0F242A395B0036C674 /* Fonts.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -110,6 +117,7 @@
 		2DD2A974242A0289004E4E38 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				2D78AC0D242A39240036C674 /* Assets.swift */,
 				2DD8281824299159004F2738 /* Assets.xcassets */,
 			);
 			path = Assets;
@@ -118,6 +126,7 @@
 		2DD2A975242A0292004E4E38 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
+				2D78AC11242A396E0036C674 /* Localized.swift */,
 				2DD2A976242A0330004E4E38 /* Localizable.strings */,
 			);
 			path = Localization;
@@ -275,6 +284,7 @@
 				2DD8280924299158004F2738 /* Frameworks */,
 				2DD8280A24299158004F2738 /* Resources */,
 				2DD2A9712429F976004E4E38 /* SwiftLint */,
+				2D78AC0A242A2BF20036C674 /* Swiftgen */,
 			);
 			buildRules = (
 			);
@@ -333,6 +343,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2D78AC0A242A2BF20036C674 /* Swiftgen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftgen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftgen\n";
+		};
 		2DD2A9712429F976004E4E38 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -363,9 +391,11 @@
 				2D78AC06242A26DE0036C674 /* Strings.swift in Sources */,
 				2DD2A985242A0701004E4E38 /* BasePresenter.swift in Sources */,
 				2DD2A983242A0701004E4E38 /* BasePresenterProtocol.swift in Sources */,
+				2D78AC12242A396F0036C674 /* Localized.swift in Sources */,
 				2D78ABFC242A25730036C674 /* Urls.swift in Sources */,
 				2DD2A984242A0701004E4E38 /* BaseModel.swift in Sources */,
 				2DD2A981242A0700004E4E38 /* BaseViewController.swift in Sources */,
+				2D78AC0E242A39240036C674 /* Assets.swift in Sources */,
 				2DD2A986242A0701004E4E38 /* BaseViewProtocol.swift in Sources */,
 				2D78ABFE242A25960036C674 /* Errors.swift in Sources */,
 				2D78AC03242A267F0036C674 /* NetworkError.swift in Sources */,
@@ -374,6 +404,7 @@
 				2DD2A982242A0700004E4E38 /* BaseModelProtocol.swift in Sources */,
 				2D0C6478242A14A700F2E1E1 /* Container.swift in Sources */,
 				2DD8281224299158004F2738 /* SceneDelegate.swift in Sources */,
+				2D78AC10242A395B0036C674 /* Fonts.swift in Sources */,
 				2D0C647B242A17E200F2E1E1 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

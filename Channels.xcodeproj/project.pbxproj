@@ -11,6 +11,12 @@
 		2D0C6478242A14A700F2E1E1 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0C6477242A14A600F2E1E1 /* Container.swift */; };
 		2D0C647B242A17E200F2E1E1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0C6479242A17E200F2E1E1 /* HomeViewController.swift */; };
 		2D0C647C242A17E200F2E1E1 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D0C647A242A17E200F2E1E1 /* HomeViewController.xib */; };
+		2D78ABFC242A25730036C674 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D78ABFB242A25730036C674 /* Urls.swift */; };
+		2D78ABFE242A25960036C674 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D78ABFD242A25960036C674 /* Errors.swift */; };
+		2D78AC01242A266D0036C674 /* NetworkDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D78AC00242A266D0036C674 /* NetworkDefaults.swift */; };
+		2D78AC03242A267F0036C674 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D78AC02242A267F0036C674 /* NetworkError.swift */; };
+		2D78AC06242A26DE0036C674 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D78AC05242A26DE0036C674 /* Strings.swift */; };
+		2D78AC09242A2A3E0036C674 /* NavigationBar+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D78AC08242A2A3E0036C674 /* NavigationBar+Appearance.swift */; };
 		2DD2A977242A0330004E4E38 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DD2A976242A0330004E4E38 /* Localizable.strings */; };
 		2DD2A981242A0700004E4E38 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2A97B242A0700004E4E38 /* BaseViewController.swift */; };
 		2DD2A982242A0700004E4E38 /* BaseModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2A97C242A0700004E4E38 /* BaseModelProtocol.swift */; };
@@ -29,6 +35,12 @@
 		2D0C6477242A14A600F2E1E1 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		2D0C6479242A17E200F2E1E1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2D0C647A242A17E200F2E1E1 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		2D78ABFB242A25730036C674 /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
+		2D78ABFD242A25960036C674 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		2D78AC00242A266D0036C674 /* NetworkDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDefaults.swift; sourceTree = "<group>"; };
+		2D78AC02242A267F0036C674 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		2D78AC05242A26DE0036C674 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		2D78AC08242A2A3E0036C674 /* NavigationBar+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationBar+Appearance.swift"; sourceTree = "<group>"; };
 		2DD2A976242A0330004E4E38 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		2DD2A97B242A0700004E4E38 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2DD2A97C242A0700004E4E38 /* BaseModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModelProtocol.swift; sourceTree = "<group>"; };
@@ -55,6 +67,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D78ABFF242A26240036C674 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2D78AC00242A266D0036C674 /* NetworkDefaults.swift */,
+				2D78AC02242A267F0036C674 /* NetworkError.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2D78AC04242A26B00036C674 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2D78AC07242A26FB0036C674 /* HelperClasses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HelperClasses;
+			sourceTree = "<group>";
+		};
 		2DD2A972242A0235004E4E38 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +155,7 @@
 		2DD2A988242A073C004E4E38 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2D78AC08242A2A3E0036C674 /* NavigationBar+Appearance.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -143,6 +179,8 @@
 		2DD2A98B242A09F1004E4E38 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				2D78ABFF242A26240036C674 /* Core */,
+				2D78AC04242A26B00036C674 /* Service */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -175,6 +213,7 @@
 		2DD2A98F242A0B50004E4E38 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2D78AC07242A26FB0036C674 /* HelperClasses */,
 				2DD2A990242A0B84004E4E38 /* Constants */,
 			);
 			path = Helpers;
@@ -183,6 +222,9 @@
 		2DD2A990242A0B84004E4E38 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				2D78ABFB242A25730036C674 /* Urls.swift */,
+				2D78ABFD242A25960036C674 /* Errors.swift */,
+				2D78AC05242A26DE0036C674 /* Strings.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -316,12 +358,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D78AC01242A266D0036C674 /* NetworkDefaults.swift in Sources */,
 				2D0C6476242A149400F2E1E1 /* AppManager.swift in Sources */,
+				2D78AC06242A26DE0036C674 /* Strings.swift in Sources */,
 				2DD2A985242A0701004E4E38 /* BasePresenter.swift in Sources */,
 				2DD2A983242A0701004E4E38 /* BasePresenterProtocol.swift in Sources */,
+				2D78ABFC242A25730036C674 /* Urls.swift in Sources */,
 				2DD2A984242A0701004E4E38 /* BaseModel.swift in Sources */,
 				2DD2A981242A0700004E4E38 /* BaseViewController.swift in Sources */,
 				2DD2A986242A0701004E4E38 /* BaseViewProtocol.swift in Sources */,
+				2D78ABFE242A25960036C674 /* Errors.swift in Sources */,
+				2D78AC03242A267F0036C674 /* NetworkError.swift in Sources */,
+				2D78AC09242A2A3E0036C674 /* NavigationBar+Appearance.swift in Sources */,
 				2DD8281024299158004F2738 /* AppDelegate.swift in Sources */,
 				2DD2A982242A0700004E4E38 /* BaseModelProtocol.swift in Sources */,
 				2D0C6478242A14A700F2E1E1 /* Container.swift in Sources */,

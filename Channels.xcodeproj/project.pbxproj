@@ -194,13 +194,13 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		2DD2A98C242A0A17004E4E38 /* Sences */ = {
+		2DD2A98C242A0A17004E4E38 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				2D0C6479242A17E200F2E1E1 /* HomeViewController.swift */,
 				2D0C647A242A17E200F2E1E1 /* HomeViewController.xib */,
 			);
-			path = Sences;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		2DD2A98D242A0ABA004E4E38 /* Coordinators */ = {
@@ -266,7 +266,7 @@
 				2DD2A98F242A0B50004E4E38 /* Helpers */,
 				2DD2A98B242A09F1004E4E38 /* Networking */,
 				2DD2A972242A0235004E4E38 /* Resources */,
-				2DD2A98C242A0A17004E4E38 /* Sences */,
+				2DD2A98C242A0A17004E4E38 /* Scenes */,
 				2DD2A98A242A0785004E4E38 /* SupportingFiles */,
 				2DD2A989242A0754004E4E38 /* UI */,
 			);

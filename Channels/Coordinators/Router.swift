@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Container {
+class Router {
   class func getHomeScene() -> UIViewController {
          return HomeViewController()
      }

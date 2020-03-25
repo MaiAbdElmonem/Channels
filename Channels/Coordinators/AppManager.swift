@@ -29,7 +29,7 @@ class AppManager: NSObject {
     static func initWindow() {
 
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let vc = Container.getHomeScene()
+        let vc = Router.getHomeScene()
         window.rootViewController = vc
         window.makeKeyAndVisible()
     }
@@ -37,7 +37,7 @@ class AppManager: NSObject {
     @available(iOS 13.0, *)
     static func initWindow(windowScene: UIWindowScene) {
         let window = UIWindow(windowScene: windowScene)
-        let vc = Container.getHomeScene()
+        let vc = Router.getHomeScene()
         window.rootViewController = vc
         window.makeKeyAndVisible()
         self.shared.window = window

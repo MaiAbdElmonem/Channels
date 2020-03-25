@@ -1,0 +1,11 @@
+//
+//  Production.xcconfig
+//  Channels
+//
+//  Created by Mai Abd Elmonem on 3/25/20.
+//  Copyright © 2020 Mai Abd Elmonem. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+APP_NAME = Channels (Production)

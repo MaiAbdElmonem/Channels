@@ -22,6 +22,7 @@
 		2D78AC0E242A39240036C674 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D78AC0D242A39240036C674 /* Assets.swift */; };
 		2D78AC10242A395B0036C674 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D78AC0F242A395B0036C674 /* Fonts.swift */; };
 		2D78AC12242A396F0036C674 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D78AC11242A396E0036C674 /* Localized.swift */; };
+		2D9854D0243155F30082C3F8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D9854CF243155F30082C3F8 /* Colors.xcassets */; };
 		2DD2A977242A0330004E4E38 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DD2A976242A0330004E4E38 /* Localizable.strings */; };
 		2DD2A981242A0700004E4E38 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2A97B242A0700004E4E38 /* BaseViewController.swift */; };
 		2DD2A982242A0700004E4E38 /* BaseModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2A97C242A0700004E4E38 /* BaseModelProtocol.swift */; };
@@ -53,6 +54,7 @@
 		2D78AC0D242A39240036C674 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		2D78AC0F242A395B0036C674 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		2D78AC11242A396E0036C674 /* Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
+		2D9854CF243155F30082C3F8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2DD2A976242A0330004E4E38 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		2DD2A97B242A0700004E4E38 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2DD2A97C242A0700004E4E38 /* BaseModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModelProtocol.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			children = (
 				2D78AC0D242A39240036C674 /* Assets.swift */,
 				2DD8281824299159004F2738 /* Assets.xcassets */,
+				2D9854CF243155F30082C3F8 /* Colors.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				2DD8281C24299159004F2738 /* LaunchScreen.storyboard in Resources */,
 				2D1323C3242B8DA300C43D78 /* Images.xcassets in Resources */,
 				2DD2A977242A0330004E4E38 /* Localizable.strings in Resources */,
+				2D9854D0243155F30082C3F8 /* Colors.xcassets in Resources */,
 				2DD8281924299159004F2738 /* Assets.xcassets in Resources */,
 				2D0C647C242A17E200F2E1E1 /* HomeViewController.xib in Resources */,
 			);

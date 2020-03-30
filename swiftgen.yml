@@ -1,0 +1,26 @@
+input_dir: Channels
+output_dir: Channels
+strings:
+  inputs:
+    - Resources/Localization/Localizable.strings
+  outputs:
+    templateName: structured-swift4
+    output: Resources/Localization/Localized.swift
+  
+custom_rules:
+  swiftgen_strings:
+    name: "SwiftGen Strings"
+    regex: 'NSLocalizedString'
+    message: "Use L10n.key instead"
+    severity: error
+fonts:
+  inputs: Resources/Fonts
+  outputs:
+    templateName: swift4
+    output: Resources/Fonts/Fonts.swift
+xcassets:
+  inputs:
+    - Resources/Assets/Assets.xcassets
+  outputs:
+    templateName: swift4
+    output: Resources/Assets/Assets.swift

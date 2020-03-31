@@ -23,21 +23,21 @@ class AppManager: NSObject {
             
             initWindow()
         }
-
     }
 
     static func initWindow() {
 
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let vc = Router.getHomeScene()
-        window.rootViewController = vc
-        window.makeKeyAndVisible()
+        let vc = Router.getSplashScene()
+           window.rootViewController = vc
+           window.makeKeyAndVisible()
+           self.shared.window = window
     }
 
     @available(iOS 13.0, *)
     static func initWindow(windowScene: UIWindowScene) {
         let window = UIWindow(windowScene: windowScene)
-        let vc = Router.getHomeScene()
+        let vc = Router.getSplashScene()
         window.rootViewController = vc
         window.makeKeyAndVisible()
         self.shared.window = window

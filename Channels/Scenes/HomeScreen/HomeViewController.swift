@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
   // MARK: - Public Variables
   // MARK: - Private Variables
   // MARK: - IBOutlets
+  @IBOutlet private weak var helloLabel: UILabel!
   // MARK: - IBActions
   // MARK: - View controller lifecycle methods
   // MARK: - Protocal
@@ -23,6 +24,7 @@ class HomeViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     print(Environment.AppName)
+//    helloLabel.font = UIFont.systemFont(ofSize: 9)
 
   }
   

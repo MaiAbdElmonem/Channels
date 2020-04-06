@@ -32,6 +32,7 @@ class AppManager: NSObject {
            window.rootViewController = vc
            window.makeKeyAndVisible()
            self.shared.window = window
+          self.shared.setGlobalFontAppearance()
     }
 
     @available(iOS 13.0, *)
@@ -41,10 +42,18 @@ class AppManager: NSObject {
         window.rootViewController = vc
         window.makeKeyAndVisible()
         self.shared.window = window
+        self.shared.setGlobalFontAppearance()
     }
 
     func setWindowRoot(_ viewController: UIViewController) {
         self.window?.rootViewController = viewController
     }
+  
+  func setGlobalFontAppearance() {
+    let customFont = FontFamily.Gotu.regular.font(size: 40) ?? UIFont.systemFont(ofSize: 20.0)
+    UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: customFont], for: .normal)
+    UITextField.appearance().substituteFontName = FontFamily.Gotu.regular.font(size: 40)
+    UILabel.appearance().substituteFontName = FontFamily.Gotu.regular.font(size: 40)
+  }
 
 }

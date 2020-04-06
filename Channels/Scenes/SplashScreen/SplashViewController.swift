@@ -15,8 +15,7 @@ class SplashViewController: UIViewController {
     super.viewDidLoad()
     animateSplash()
     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-      let vc = self.getInitialScene()
-      AppManager.shared.window?.rootViewController = vc
+      AppManager.shared.setWindowRoot(self.getInitialScene())
       AppManager.shared.window?.makeKeyAndVisible()
     }
   }
@@ -46,14 +45,15 @@ class SplashViewController: UIViewController {
   
   func getInitialScene() -> UIViewController {
     
-    let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
-    if launchedBefore {
-      print("Not first launch.")
+    let launchedBefore = PersistenceManager.getBoolValue(key: .isLaunchedBefore)
+
+    if  !launchedBefore {
+      print("First launch")
+      PersistenceManager.setSavedValue(value: true, key: .isLaunchedBefore)
       return Router.getHomeScene()
       
     } else {
-      print("First launch, setting UserDefault.")
-      UserDefaults.standard.set(true, forKey: "launchedBefore")
+      print("Not first launch")
       return Router.getHomeScene()
     }
   }

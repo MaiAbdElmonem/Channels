@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum StringsConstants: String {
-   case str
+enum UserDefaultKeys: String, CaseIterable {
+ case isLaunchedBefore
 }

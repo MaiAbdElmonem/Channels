@@ -9,26 +9,26 @@
 import Foundation
 import UIKit
 
-enum FontName: String {
-  case avenir = "Avenir"
-}
-
 extension UILabel {
-  var substituteFontName: UIFont {
-    get { return self.font }
+  var substituteFontName: String {
+    get { return self.font.fontName }
     set {
-      //get old size of lable font
-      //          let sizeOfOldFont = self.font.pointSize
       //get new name  of font
-      let fontNameOfNewFont = newValue.fontName
-      self.font = UIFont(name: fontNameOfNewFont, size: newValue.pointSize)
+      self.font = UIFont(name: newValue, size: 30)
     }
   }
 }
 
 extension UITextField {
-  var substituteFontName: UIFont {
-    get { return self.font ?? UIFont.systemFont(ofSize: 20.0) }
-    set { self.font = UIFont(name: newValue.fontName, size: (newValue.pointSize)) }
+  var substituteFontName: String {
+    get { return self.font?.fontName ?? "" }
+    set { self.font = UIFont(name: newValue, size: 30) }
+  }
+}
+
+extension UITextView {
+  var substituteFontName: String {
+    get { return self.font?.fontName ?? "" }
+    set { self.font = UIFont(name: newValue, size: 30) }
   }
 }

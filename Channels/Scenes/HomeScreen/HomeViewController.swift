@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IGListKit
 
 class HomeViewController: UIViewController {
   
@@ -24,7 +25,6 @@ class HomeViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     print(Environment.AppName)
-//    helloLabel.font = UIFont.systemFont(ofSize: 9)
 
   }
   

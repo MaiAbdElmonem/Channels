@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,12 @@
 		2D0C647C242A17E200F2E1E1 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D0C647A242A17E200F2E1E1 /* HomeViewController.xib */; };
 		2D1323C3242B8DA300C43D78 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1323C2242B8DA300C43D78 /* Images.xcassets */; };
 		2D1323C8242B9B0F00C43D78 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1323C7242B9B0F00C43D78 /* Enviroment.swift */; };
+		2D4F219B244C8F5B00739CAC /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D4F219A244C8F5B00739CAC /* Colors.xcassets */; };
+		2D4F219D244C909700739CAC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F219C244C909600739CAC /* Colors.swift */; };
 		2D613E9C2439447D00C2E54B /* AppFontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D613E9B2439447D00C2E54B /* AppFontManager.swift */; };
+		2D74B5F9244CE1A80009C4CE /* IGListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D4F219F244CA68900739CAC /* IGListKit.framework */; };
+		2D74B600244CE53E0009C4CE /* IGListDiffKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D74B5FC244CE4F80009C4CE /* IGListDiffKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		2D74B601244CE53E0009C4CE /* IGListDiffKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D74B5FC244CE4F80009C4CE /* IGListDiffKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2D78ABFC242A25730036C674 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D78ABFB242A25730036C674 /* Urls.swift */; };
 		2D78ABFE242A25960036C674 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D78ABFD242A25960036C674 /* Errors.swift */; };
 		2D78AC01242A266D0036C674 /* NetworkDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D78AC00242A266D0036C674 /* NetworkDefaults.swift */; };
@@ -40,6 +45,20 @@
 		2DF5480824391193000E15F9 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF5480724391193000E15F9 /* PersistenceManager.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2D74B602244CE53E0009C4CE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2D74B601244CE53E0009C4CE /* IGListDiffKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2D0C6475242A149400F2E1E1 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		2D0C6477242A14A600F2E1E1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -49,7 +68,13 @@
 		2D1323C4242B8DF400C43D78 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		2D1323C5242B8E0500C43D78 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		2D1323C7242B9B0F00C43D78 /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
+		2D4F219A244C8F5B00739CAC /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		2D4F219C244C909600739CAC /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		2D4F219F244CA68900739CAC /* IGListKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IGListKit.framework; path = Carthage/Build/iOS/IGListKit.framework; sourceTree = "<group>"; };
+		2D4F21A4244CC04400739CAC /* CarthageInput.xcfilelist */ = {isa = PBXFileReference; lastKnownFileType = text.xcfilelist; path = CarthageInput.xcfilelist; sourceTree = "<group>"; };
+		2D4F21A5244CC06400739CAC /* CarthageOutput.xcfilelist */ = {isa = PBXFileReference; lastKnownFileType = text.xcfilelist; path = CarthageOutput.xcfilelist; sourceTree = "<group>"; };
 		2D613E9B2439447D00C2E54B /* AppFontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFontManager.swift; sourceTree = "<group>"; };
+		2D74B5FC244CE4F80009C4CE /* IGListDiffKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IGListDiffKit.framework; path = Carthage/Build/iOS/IGListDiffKit.framework; sourceTree = "<group>"; };
 		2D78ABFB242A25730036C674 /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
 		2D78ABFD242A25960036C674 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		2D78AC00242A266D0036C674 /* NetworkDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDefaults.swift; sourceTree = "<group>"; };
@@ -83,6 +108,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D74B600244CE53E0009C4CE /* IGListDiffKit.framework in Frameworks */,
+				2D74B5F9244CE1A80009C4CE /* IGListKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,8 +123,28 @@
 				2D1323C4242B8DF400C43D78 /* Staging.xcconfig */,
 				2D1323C5242B8E0500C43D78 /* Production.xcconfig */,
 				2D1323C7242B9B0F00C43D78 /* Enviroment.swift */,
+				2D4F21A4244CC04400739CAC /* CarthageInput.xcfilelist */,
+				2D4F21A5244CC06400739CAC /* CarthageOutput.xcfilelist */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		2D4F2199244C8ED500739CAC /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				2D4F219C244C909600739CAC /* Colors.swift */,
+				2D4F219A244C8F5B00739CAC /* Colors.xcassets */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		2D4F219E244CA68900739CAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D74B5FC244CE4F80009C4CE /* IGListDiffKit.framework */,
+				2D4F219F244CA68900739CAC /* IGListKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		2D78ABFF242A26240036C674 /* Core */ = {
@@ -146,9 +193,10 @@
 		2DD2A972242A0235004E4E38 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2DD2A975242A0292004E4E38 /* Localization */,
 				2DD2A974242A0289004E4E38 /* Assets */,
+				2D4F2199244C8ED500739CAC /* Colors */,
 				2DD2A973242A027E004E4E38 /* Fonts */,
+				2DD2A975242A0292004E4E38 /* Localization */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -291,6 +339,7 @@
 			children = (
 				2DD8280E24299158004F2738 /* Channels */,
 				2DD8280D24299158004F2738 /* Products */,
+				2D4F219E244CA68900739CAC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -329,11 +378,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DD8282024299159004F2738 /* Build configuration list for PBXNativeTarget "Channels" */;
 			buildPhases = (
+				2D78AC0A242A2BF20036C674 /* Swiftgen */,
 				2DD8280824299158004F2738 /* Sources */,
 				2DD8280924299158004F2738 /* Frameworks */,
 				2DD8280A24299158004F2738 /* Resources */,
+				2D4F21A3244CAFA700739CAC /* Carthage */,
 				2DD2A9712429F976004E4E38 /* SwiftLint */,
-				2D78AC0A242A2BF20036C674 /* Swiftgen */,
+				2D74B602244CE53E0009C4CE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -387,6 +438,7 @@
 				2DAD66B924338F6F00D5D533 /* Gotu-Regular.ttf in Resources */,
 				2DD2A977242A0330004E4E38 /* Localizable.strings in Resources */,
 				2D936EFA24329F680038CA9C /* SplashViewController.xib in Resources */,
+				2D4F219B244C8F5B00739CAC /* Colors.xcassets in Resources */,
 				2DD8281924299159004F2738 /* Assets.xcassets in Resources */,
 				2D0C647C242A17E200F2E1E1 /* HomeViewController.xib in Resources */,
 			);
@@ -395,6 +447,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2D4F21A3244CAFA700739CAC /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/Channels/Configuration/CarthageInput.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = Carthage;
+			outputFileListPaths = (
+				"$(SRCROOT)/Channels/Configuration/CarthageOutput.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 		2D78AC0A242A2BF20036C674 /* Swiftgen */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -444,6 +516,7 @@
 				2D78AC06242A26DE0036C674 /* Strings.swift in Sources */,
 				2DD2A985242A0701004E4E38 /* BasePresenter.swift in Sources */,
 				2DD2A983242A0701004E4E38 /* BasePresenterProtocol.swift in Sources */,
+				2D4F219D244C909700739CAC /* Colors.swift in Sources */,
 				2D78AC12242A396F0036C674 /* Localized.swift in Sources */,
 				2D78ABFC242A25730036C674 /* Urls.swift in Sources */,
 				2DD2A984242A0701004E4E38 /* BaseModel.swift in Sources */,
@@ -546,6 +619,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Channels/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -679,6 +756,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Channels/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -696,6 +777,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Channels/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

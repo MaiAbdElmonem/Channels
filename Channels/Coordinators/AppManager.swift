@@ -50,10 +50,10 @@ class AppManager: NSObject {
     }
   
   func setGlobalFontAppearance() {
-    let customFont = FontFamily.Gotu.regular.font(size: 40) ?? UIFont.systemFont(ofSize: 20.0)
+    let customFont = FontFamily.Gotu.regular.font(size: 40) ?? UIFont.systemFont(ofSize: 20)
     UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: customFont], for: .normal)
-    UITextField.appearance().substituteFontName = FontFamily.Gotu.regular.font(size: 40)
-    UILabel.appearance().substituteFontName = FontFamily.Gotu.regular.font(size: 40)
+    UITextField.appearance().substituteFontName = FontFamily.Gotu.regular.family
+    UILabel.appearance().substituteFontName = FontFamily.Gotu.regular.family
   }
 
 }

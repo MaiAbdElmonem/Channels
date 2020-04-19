@@ -23,28 +23,37 @@ class AppManager: NSObject {
             
             initWindow()
         }
-
     }
 
     static func initWindow() {
 
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let vc = Router.getHomeScene()
-        window.rootViewController = vc
-        window.makeKeyAndVisible()
+        let vc = Router.getSplashScene()
+           window.rootViewController = vc
+           window.makeKeyAndVisible()
+           self.shared.window = window
+          self.shared.setGlobalFontAppearance()
     }
 
     @available(iOS 13.0, *)
     static func initWindow(windowScene: UIWindowScene) {
         let window = UIWindow(windowScene: windowScene)
-        let vc = Router.getHomeScene()
+        let vc = Router.getSplashScene()
         window.rootViewController = vc
         window.makeKeyAndVisible()
         self.shared.window = window
+        self.shared.setGlobalFontAppearance()
     }
 
     func setWindowRoot(_ viewController: UIViewController) {
         self.window?.rootViewController = viewController
     }
+  
+  func setGlobalFontAppearance() {
+    let customFont = FontFamily.Gotu.regular.font(size: 40) ?? UIFont.systemFont(ofSize: 20.0)
+    UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: customFont], for: .normal)
+    UITextField.appearance().substituteFontName = FontFamily.Gotu.regular.font(size: 40)
+    UILabel.appearance().substituteFontName = FontFamily.Gotu.regular.font(size: 40)
+  }
 
 }

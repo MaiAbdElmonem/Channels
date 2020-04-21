@@ -16,6 +16,6 @@ class Router {
   }
   
   class func getHomeScene() -> UIViewController {
-         return HomeViewController()
+         return ChannelsViewController()
      }
 }

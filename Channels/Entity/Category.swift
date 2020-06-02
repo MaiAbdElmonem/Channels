@@ -8,30 +8,11 @@
 
 import Foundation
 
-struct CategoryType: Hashable {
-    let sectionType: SectionType = .categories
-    let title = "Browse by Categories"
-    let categories: [Category]
-    let identifier = UUID()
-          
-    func hash(into hasher: inout Hasher) {
-                 return hasher.combine(identifier)
-             }
-             
-    static func == (lhs: CategoryType, rhs: CategoryType) -> Bool {
-                 return lhs.identifier == rhs.identifier
-       }
-}
-
-struct Category: Hashable, Codable {
-    let name: String
-    let identifier = UUID()
-
-    func hash(into hasher: inout Hasher) {
-                 return hasher.combine(identifier)
-             }
-
-    static func == (lhs: Category, rhs: Category) -> Bool {
-                 return lhs.identifier == rhs.identifier
-       }
+struct Category: Codable {
+    let name: String?
+  
+    init(from decoder: Decoder) throws {
+      let values = try decoder.container(keyedBy: CodingKeys.self)
+      name = try values.decodeIfPresent(String.self, forKey: .name)
+    }
 }

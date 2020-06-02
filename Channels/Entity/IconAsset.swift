@@ -7,7 +7,13 @@
 //
 
 import Foundation
+
 struct IconAsset: Codable {
   let thumbnailUrl: String?
+  
+  init(from decoder: Decoder) throws {
+    let values = try decoder.container(keyedBy: CodingKeys.self)
+    thumbnailUrl = try values.decodeIfPresent(String.self, forKey: .thumbnailUrl)
+  }
 
 }

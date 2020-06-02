@@ -14,7 +14,7 @@ extension UILabel {
     get { return self.font.fontName }
     set {
       //get new name  of font
-      self.font = UIFont(name: newValue, size: 30)
+      self.font = UIFont(name: newValue, size: 16)
     }
   }
 }
@@ -22,13 +22,13 @@ extension UILabel {
 extension UITextField {
   var substituteFontName: String {
     get { return self.font?.fontName ?? "" }
-    set { self.font = UIFont(name: newValue, size: 30) }
+    set { self.font = UIFont(name: newValue, size: 16) }
   }
 }
 
 extension UITextView {
   var substituteFontName: String {
     get { return self.font?.fontName ?? "" }
-    set { self.font = UIFont(name: newValue, size: 30) }
+    set { self.font = UIFont(name: newValue, size: 16) }
   }
 }

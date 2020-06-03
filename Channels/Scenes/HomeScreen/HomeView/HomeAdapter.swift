@@ -10,17 +10,14 @@ import IGListKit
 import UIKit
 import Foundation
 
-class HomeDataSource: NSObject, ListAdapterDataSource {
+class HomeAdapter: NSObject, ListAdapterDataSource {
   
   var list = [Section]()
   
   func add(item: Section) {}
   
   func add(items: [Section]) {
-//    for sec in items {
-//      if let sss = sec.items {
     self.list.append(contentsOf: items)
-//    self.adapter?.performUpdates(animated: true, completion: nil)
   }
     
   func count() -> Int {
@@ -32,23 +29,20 @@ class HomeDataSource: NSObject, ListAdapterDataSource {
     return sectionTypes
   }
   
-//  let data: [Any] = [
-//   1,
-//   2
-//   ]
-//  let objects: [ListDiffable] = [
-//    CatListDiffable(text: "Career"),
-//    CatListDiffable(text: "Emotional"),
-//    CatListDiffable(text: "Health & Fitness"), CatListDiffable(text: "Character"),
-//    CatListDiffable(text: "Financial")]
-//  var vmObj = HomeConstants()
-  
   func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
     return list
   }
   
   func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
     let sectionType = self.getSectionType()
+    for item in list {
+      if (item.items?.firstIndex(where: { $0 as AnyObject === Media.self as AnyObject})) != nil {
+        print("0")
+      }
+      if (item.items?.firstIndex(where: { $0 as AnyObject === Category.self as AnyObject})) != nil {
+        print("1")
+      }
+    }
 //    if sectionType.index(0, offsetBy: 0) {
     if object is Section {
       if sectionType is [Media] {
@@ -76,4 +70,3 @@ class HomeDataSource: NSObject, ListAdapterDataSource {
 //    adapter?.collectionView = collectionView
 //    adapter?.dataSource = self
 //  }
-

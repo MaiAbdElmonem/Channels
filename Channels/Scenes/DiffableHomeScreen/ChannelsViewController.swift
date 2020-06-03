@@ -29,15 +29,10 @@ class ChannelsViewController: UIViewController {
   
   func configureCollectionView () {
     channelsCollectionView.delegate = self
-    channelsCollectionView.register(HomeCollectionViewCell.self)
-    channelsCollectionView.register(BrowseCategoriesCollectionViewCell.self)
   }
   
   func configureHeader() {
-    channelsCollectionView.register(
-      HeaderSection.nib,
-      forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier:
-      HeaderSection.identifier)
+  
   }
   
   func createLayout() -> UICollectionViewLayout {

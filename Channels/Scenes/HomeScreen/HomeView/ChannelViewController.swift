@@ -18,7 +18,7 @@ class ChannelViewController: BaseViewController {
     self.presenter = presenter
   }
   
-  var homeAdaptor = HomeDataSource()
+  var homeAdaptor = HomeAdapter()
   lazy var adapter: ListAdapter = {
     return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
   }()

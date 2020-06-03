@@ -22,8 +22,8 @@ BasePresenter<View, Model>, HomePresenterProtocol {
   
   func loadData() {
     var sections: [Section] = []
-    sections.append(Section(items: model?.getEpisodes() ?? []))
     sections.append(Section(items: model?.getCategories() ?? []))
+    sections.append(Section(items: model?.getEpisodes() ?? []))
 //    if let channels = model?.getChannels() {
 //      for channel in channels {
 //        sections.append(Section(items: channel.latestMedia ?? []))

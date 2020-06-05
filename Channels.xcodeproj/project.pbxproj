@@ -44,7 +44,6 @@
 		2D7EDFC5244E701B00213F28 /* CollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7EDFC4244E701B00213F28 /* CollectionView+Extensions.swift */; };
 		2D9207FF2454DF7700D6BAC3 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9207FD2454DF7700D6BAC3 /* ChannelViewController.swift */; };
 		2D9208002454DF7700D6BAC3 /* ChannelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D9207FE2454DF7700D6BAC3 /* ChannelViewController.xib */; };
-		2D9208202454EF0500D6BAC3 /* HomeSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92081F2454EF0500D6BAC3 /* HomeSectionController.swift */; };
 		2D936EF924329F680038CA9C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D936EF724329F680038CA9C /* SplashViewController.swift */; };
 		2D936EFA24329F680038CA9C /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D936EF824329F680038CA9C /* SplashViewController.xib */; };
 		2D9C5172244EEF310077BF3C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C5171244EEF310077BF3C /* Category.swift */; };
@@ -142,7 +141,6 @@
 		2D7EDFC4244E701B00213F28 /* CollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		2D9207FD2454DF7700D6BAC3 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		2D9207FE2454DF7700D6BAC3 /* ChannelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelViewController.xib; sourceTree = "<group>"; };
-		2D92081F2454EF0500D6BAC3 /* HomeSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionController.swift; sourceTree = "<group>"; };
 		2D936EF724329F680038CA9C /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		2D936EF824329F680038CA9C /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		2D9C5171244EEF310077BF3C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -262,7 +260,6 @@
 				2D0D988324585D2B0021CAFA /* EpisodesSectionController.swift */,
 				2D0D988224585D2B0021CAFA /* HorizontalCollectionViewCell.swift */,
 				2D0D987E2458552D0021CAFA /* CategoriesSectionController.swift */,
-				2D92081F2454EF0500D6BAC3 /* HomeSectionController.swift */,
 			);
 			path = SectionsControllers;
 			sourceTree = "<group>";
@@ -745,7 +742,6 @@
 				2D780B76246F648000506B37 /* APIResponse.swift in Sources */,
 				2D9C5184244F07160077BF3C /* IconAsset.swift in Sources */,
 				2D0C6478242A14A700F2E1E1 /* Router.swift in Sources */,
-				2D9208202454EF0500D6BAC3 /* HomeSectionController.swift in Sources */,
 				2D9C5175244EF06B0077BF3C /* Channel.swift in Sources */,
 				2D74B60A244D1A570009C4CE /* HomeAdapter.swift in Sources */,
 				2DB3BA9E2470A09500C8A4DC /* HomePresenter.swift in Sources */,

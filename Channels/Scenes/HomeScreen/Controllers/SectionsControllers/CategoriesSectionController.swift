@@ -10,8 +10,9 @@ import Foundation
 import IGListKit
 
  class CategoriesSectionController: ListSectionController {
-//  var categoryList: [Category] = []
-  var model: Section?
+  var categoryList: [Category] = []
+  var model: MyStruct<Category>?
+//  var model: Section?
      override init() {
          super.init()
          self.inset = .init(top: 10, left: 10, bottom: 10, right: 10)
@@ -21,12 +22,12 @@ import IGListKit
      }
     
       override func numberOfItems() -> Int {
-        if let sss = model?.items as? [Category] {
-          return sss.count
-        } else {
-          return 0
-        }
-//        return categoryList.count
+        return categoryList.count
+//        if let sss = model?.items as? [Category] {
+//          return sss.count
+//        } else {
+//          return 0
+//        }
       }
   
   override func cellForItem(at index: Int) -> UICollectionViewCell {
@@ -35,9 +36,9 @@ import IGListKit
                                                             at: index) as? CategoryCollectionViewCell else {
                                                                         fatalError("categories cell failed")
             }
-    guard let categories = model?.items?[index] as? Category else { return UICollectionViewCell() }
+//    guard let categories = model?.items?[index] as? Category else { return UICollectionViewCell() }
 
-    cell.configure(with: categories)
+    cell.configure(with: categoryList[index])
            return cell
   }
   
@@ -45,11 +46,16 @@ import IGListKit
     let width = collectionContext?.containerSize.width ?? 0
     let widthItem = ((width - 50) / 2) - 8
             return CGSize(width: widthItem, height: widthItem / 2)
-  }
+    }
   
   override func didUpdate(to object: Any) {
-    model = object as? Section
-//    self.categoryList = object as? [Category] ?? []
+//    model = object as? Section
+    if let container = (object as? MyStruct<Category>) {
+//      container.property.append(contentsOf: categoryList)
+      self.categoryList = container.property
+    } else {
+        self.categoryList = []
+    }
   }
   
 }

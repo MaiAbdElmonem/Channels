@@ -17,7 +17,6 @@ class ChannelViewController: BaseViewController {
   func setPresenter(presenter: HomePresenterProtocol) {
     self.presenter = presenter
   }
-  
   var homeAdaptor = HomeAdapter()
   lazy var adapter: ListAdapter = {
     return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
@@ -43,7 +42,11 @@ class ChannelViewController: BaseViewController {
 }
 
 extension ChannelViewController: HomeViewProtocol {
-  func getHomeList(with data: [Section]) {
-    homeAdaptor.add(items: data)
-  } 
+  func getHomeLists(with data: [AnyObject]) {
+    homeAdaptor.adds(items: data)
+  }
+  
+//  func getHomeList(with data: [Section]) {
+//    homeAdaptor.add(items: data)
+//  } 
 }

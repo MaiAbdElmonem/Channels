@@ -11,9 +11,19 @@ import UIKit
 import Foundation
 
 class HomeAdapter: NSObject, ListAdapterDataSource {
+  var categoriesSection = [MyStruct<Category>(property: [])]
+  var eposidesSection = MyStruct<Media>(property: [])
+  var models = [ListDiffable]()
   
   var list = [Section]()
+  func ass(items: [MyStruct<Category>]) {
+    
+  }
   
+  func adds(items: [AnyObject]) {
+    self.models.append(contentsOf: categoriesSection)
+//    self.models.append(eposidesSection)
+  }
   func add(item: Section) {}
   
   func add(items: [Section]) {
@@ -24,38 +34,18 @@ class HomeAdapter: NSObject, ListAdapterDataSource {
     return list.count 
   }
   
-  func getSectionType() -> [Any] {
-    guard let sectionTypes = list.first?.items else { return [] }
-    return sectionTypes
-  }
-  
   func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-    return list
+    return models
   }
   
   func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-    let sectionType = self.getSectionType()
-    for item in list {
-      if (item.items?.firstIndex(where: { $0 as AnyObject === Media.self as AnyObject})) != nil {
-        print("0")
-      }
-      if (item.items?.firstIndex(where: { $0 as AnyObject === Category.self as AnyObject})) != nil {
-        print("1")
-      }
+    if object is MyStruct<Category> {
+      return CategoriesSectionController()
+    } else if object is MyStruct<Media> {
+      print("med")
     }
-//    if sectionType.index(0, offsetBy: 0) {
-    if object is Section {
-      if sectionType is [Media] {
-        return EpisodesSectionController()
-      }
-      if sectionType is [Category] {
-        return CategoriesSectionController()
-      } else {
-        return ListSectionController()
-      }
-    } else {
       return ListSectionController()
-    }
+
   }
   
   func emptyView(for listAdapter: ListAdapter) -> UIView? {

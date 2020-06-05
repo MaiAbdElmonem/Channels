@@ -21,15 +21,21 @@ BasePresenter<View, Model>, HomePresenterProtocol {
   }
   
   func loadData() {
-    var sections: [Section] = []
-    sections.append(Section(items: model?.getCategories() ?? []))
-    sections.append(Section(items: model?.getEpisodes() ?? []))
+    var models: [AnyObject] = []
+//    var models: [MyStruct<Category>] = []
+//    var sections: [Section] = []
+    models.append(MyStruct(property: model?.getCategories() ?? []))
+//    models.append(MyStruct(property: model?.getEpisodes() ?? []))
+//    sections.append(Section(items: model?.getEpisodes() ?? []))
+//    sections.append(Section(items: model?.getCategories() ?? []))
+//    sections.append(Section(items: model?.getEpisodes() ?? []))
 //    if let channels = model?.getChannels() {
 //      for channel in channels {
 //        sections.append(Section(items: channel.latestMedia ?? []))
 //      }
 //    }
-    view?.getHomeList(with: sections)
+//    view?.getHomeList(with: sections)
+    view?.getHomeLists(with: models)
   }
 
 }

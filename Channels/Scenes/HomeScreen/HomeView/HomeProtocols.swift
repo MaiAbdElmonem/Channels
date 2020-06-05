@@ -13,7 +13,8 @@ protocol HomePresenterProtocol: BasePresenterProtocol {
 }
 
 protocol HomeViewProtocol: BaseViewProtocol {
-    func getHomeList(with data: [Section])
+//    func getHomeList(with data: [Section])
+    func getHomeLists(with data: [AnyObject])
 }
 
 protocol HomeModelProtocol: BaseModelProtocol {

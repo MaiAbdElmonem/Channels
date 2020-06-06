@@ -10,9 +10,9 @@ import UIKit
 
 class FooterView: UICollectionReusableView {
 
-    override func awakeFromNib() {
+  override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
+  
     
 }

@@ -10,28 +10,6 @@ import Foundation
 import IGListKit
 
 class Section: ListDiffable {
-   private var identifier: String = UUID().uuidString
-  func diffIdentifier() -> NSObjectProtocol {
-    return identifier as NSString
-  }
-  
-  func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
-    return true
-  }
-  
-//  var name: String?
-  var items: [Any]?
-  init(items: [Any]) {
-//    self.name = name
-    self.items = items
-  }
-}
-
-//protocol MyProtocol {
-//    var value: Self { get }
-//}
-
-class MyStruct<T: Any>: ListDiffable {
   private var identifier: String = UUID().uuidString
   func diffIdentifier() -> NSObjectProtocol {
     return identifier as NSString
@@ -41,15 +19,28 @@ class MyStruct<T: Any>: ListDiffable {
     return true
   }
   
-  var property: [T]
-  init(property: [T]) {
-    self.property = property
+  var headers: [Any]?
+  var items: [Any]?
+  init(headers: [Any], items: [Any]) {
+    self.headers = headers
+    self.items = items
   }
 }
-//typealias SectionType = MyStruct<[Any]>
-//enum Thing {
-//    case int(Int)
-//    case string(String)
-//    case intStruct(MyStruct)
-//}
-//let myIntStruct = Thing.intStruct(MyStruct(property: [Any]))
+
+class EpisodeSection: ListDiffable {
+  private var identifier: String = UUID().uuidString
+  func diffIdentifier() -> NSObjectProtocol {
+    return identifier as NSString
+  }
+  
+  func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
+    return true
+  }
+  var sectionTitle: String = ""
+  
+  var media: [Media]?
+  
+  init(media: [Media]) {
+    self.media = media
+  }
+}

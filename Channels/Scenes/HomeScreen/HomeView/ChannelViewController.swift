@@ -42,11 +42,7 @@ class ChannelViewController: BaseViewController {
 }
 
 extension ChannelViewController: HomeViewProtocol {
-  func getHomeLists(with data: [AnyObject]) {
-    homeAdaptor.adds(items: data)
-  }
-  
-//  func getHomeList(with data: [Section]) {
-//    homeAdaptor.add(items: data)
-//  } 
+  func getHomeList(with data: [Section]) {
+    homeAdaptor.add(items: data)
+  } 
 }

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2D0C6476242A149400F2E1E1 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0C6475242A149400F2E1E1 /* AppManager.swift */; };
 		2D0C6478242A14A700F2E1E1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0C6477242A14A600F2E1E1 /* Router.swift */; };
-		2D0C647B242A17E200F2E1E1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0C6479242A17E200F2E1E1 /* HomeViewController.swift */; };
 		2D0D987C245854FC0021CAFA /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D0D987A245854FC0021CAFA /* CategoryCollectionViewCell.xib */; };
 		2D0D987D245854FC0021CAFA /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D987B245854FC0021CAFA /* CategoryCollectionViewCell.swift */; };
 		2D0D988424585D2B0021CAFA /* HorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D988224585D2B0021CAFA /* HorizontalCollectionViewCell.swift */; };
@@ -104,7 +103,6 @@
 /* Begin PBXFileReference section */
 		2D0C6475242A149400F2E1E1 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		2D0C6477242A14A600F2E1E1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		2D0C6479242A17E200F2E1E1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2D0D987A245854FC0021CAFA /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		2D0D987B245854FC0021CAFA /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		2D0D988224585D2B0021CAFA /* HorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -243,7 +241,6 @@
 		2D74B604244D05830009C4CE /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
-				2D0C6479242A17E200F2E1E1 /* HomeViewController.swift */,
 				2D74B605244D05E70009C4CE /* HomeView.swift */,
 				2D9207FD2454DF7700D6BAC3 /* ChannelViewController.swift */,
 				2D9207FE2454DF7700D6BAC3 /* ChannelViewController.xib */,
@@ -753,7 +750,6 @@
 				2D18D943248B411D00F3B969 /* SupplementaryViewAdapter.swift in Sources */,
 				2D662FD2244E563000023287 /* ChannelsViewController.swift in Sources */,
 				2D78AC10242A395B0036C674 /* Fonts.swift in Sources */,
-				2D0C647B242A17E200F2E1E1 /* HomeViewController.swift in Sources */,
 				2DC6421D247DDC030010D759 /* HomeWireFrame.swift in Sources */,
 				2D936EF924329F680038CA9C /* SplashViewController.swift in Sources */,
 				2DB3BA942470880B00C8A4DC /* NetworkManager.swift in Sources */,

@@ -10,16 +10,25 @@ import Foundation
 import UIKit
 
 class BaseViewController: UIViewController, BaseViewProtocol {
-    
-    func showLoading(allowNavigation: Bool) {
-        fatalError("\(#function) Not Implemented")
-    }
-
-    func hideLoading() {
-        fatalError("\(#function) Not Implemented")
-    }
-
-    func showError(message: String) {
-        fatalError("\(#function) Not Implemented")
-    }
+  var viewDidLoadCompletion: ((UIViewController) -> Void)?
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "",
+                                                            style: UIBarButtonItem.Style.plain,
+                                                            target: nil,
+                                                            action: nil)
+    self.viewDidLoadCompletion?(self)
+  }
+  func showLoading(allowNavigation: Bool) {
+    fatalError("\(#function) Not Implemented")
+  }
+  
+  func hideLoading() {
+    fatalError("\(#function) Not Implemented")
+  }
+  
+  func showError(message: String) {
+    fatalError("\(#function) Not Implemented")
+  }
 }

@@ -10,7 +10,14 @@ import Foundation
 import UIKit
 
 class Router {
+  
+  class func getSplashScene() -> UIViewController {
+      return SplashViewController()
+  }
+  
   class func getHomeScene() -> UIViewController {
-         return HomeViewController()
+    return HomeModule.createModule()
+//   return HomeViewController()
+//         return ChannelViewController()
      }
 }

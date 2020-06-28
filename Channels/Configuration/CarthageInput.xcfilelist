@@ -1,5 +1,0 @@
-$(SRCROOT)/Carthage/Build/iOS/IGListKit.framework
-$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework
-$(SRCROOT)/Carthage/Build/iOS/Moya.framework
-$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework
-$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework

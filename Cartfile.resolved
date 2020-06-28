@@ -1,0 +1,7 @@
+github "Alamofire/Alamofire" "5.2.1"
+github "Instagram/IGListKit" "4.0.0"
+github "Moya/Moya" "14.0.0"
+github "ReactiveCocoa/ReactiveSwift" "6.3.0"
+github "ReactiveX/RxSwift" "5.1.1"
+github "mxcl/PromiseKit" "6.13.1"
+github "onevcat/Kingfisher" "5.14.0"

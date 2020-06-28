@@ -9,9 +9,9 @@
 import Foundation
 
 struct NetworkDefaults {
-  var baseUrl: String = "https://pastebin.com/raw"
-//  var apiKey: String?
-  var language: String = "en-US"
+  var baseUrl: String?
+  var apiKey: String?
+  var language: String?
   static var `defaults` : NetworkDefaults {
     let instance = NetworkDefaults()
     return instance

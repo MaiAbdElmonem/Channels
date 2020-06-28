@@ -1,4 +1,0 @@
-github "Instagram/IGListKit" ~> 4.0.0
-github "Moya/Moya" ~> 14.0
-github "onevcat/Kingfisher" ~> 5.0
-github "mxcl/PromiseKit" ~> 6.8

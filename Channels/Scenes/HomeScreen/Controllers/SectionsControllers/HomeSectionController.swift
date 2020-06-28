@@ -12,7 +12,6 @@ import IGListKit
 class HomeSectionController: ListSectionController {
   var data: Section!
   var embeddedSectionDataSource = HorizontalCollectionViewAdapter()
-//  var supplementaryAdapter = SupplementaryViewAdapter()
   lazy var adapter: ListAdapter = {
       let adapter = ListAdapter(updater: ListAdapterUpdater(),
                                 viewController: self.viewController)

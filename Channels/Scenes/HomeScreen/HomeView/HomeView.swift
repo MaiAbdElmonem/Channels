@@ -12,7 +12,7 @@ class HomeView: UIView {
 
   let collectionView: UICollectionView = {
       let layout = UICollectionViewFlowLayout()
-      layout.scrollDirection = .horizontal
+      layout.scrollDirection = .vertical
       layout.minimumLineSpacing = 0
       layout.minimumInteritemSpacing = 0
     let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)

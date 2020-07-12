@@ -8,7 +8,6 @@
 
 import IGListKit
 import UIKit
-import Foundation
 
 class HomeAdapter: NSObject, ListAdapterDataSource {
   var list = [Section]()

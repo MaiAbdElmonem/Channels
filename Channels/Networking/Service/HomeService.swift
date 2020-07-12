@@ -16,14 +16,11 @@ enum  HomeService {
   case categories
   case episodes
 }
-var dddm: NetworkManager = {
-   return NetworkManager()
- }()
 
 extension HomeService: TargetType {
  
   var baseURL: URL {
-    return URL(string: dddm.networkConfig.baseUrl)!
+    return URL(string: NetworkManager.shared.networkConfig.baseUrl)!
   }
   
   var path: String {
@@ -45,16 +42,13 @@ extension HomeService: TargetType {
   }
   
   var sampleData: Data {
-    switch self {
-    case .categories, .channel, .episodes:
       return Data()
-    }
   }
   
   var task: Task {
     switch self {
     case .categories, .channel, .episodes:
-      return .requestParameters(parameters: ["": ""], encoding: URLEncoding.default)
+      return .requestParameters(parameters: [:], encoding: URLEncoding.default)
     }
   }
   

@@ -58,7 +58,7 @@ class HomeSectionController: ListSectionController {
                                                                         fatalError("categories cell failed")
             }
           guard let categories = data?.items?[index] as? Category else { return UICollectionViewCell() }
-      cell.configure(with: categories)
+      cell.configure(model: categories)
                return cell
       }
     return UICollectionViewCell()

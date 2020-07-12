@@ -14,20 +14,26 @@ class EpisodesCollectionViewCell: UICollectionViewCell {
   @IBOutlet private weak var titleLabel: UILabel!
   @IBOutlet private weak var subTitleLabel: UILabel!
   
-    override func awakeFromNib() {
-        super.awakeFromNib()
-      coverImage.contentMode = .scaleAspectFill
-      coverImage.layer.masksToBounds = true
-      coverImage.layer.cornerRadius = 15
-//      coverImage.alpha = 0.4
-    }
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    setup()
+  }
   
-  func configure(with media: Media) {
-    titleLabel.text = media.title
-    subTitleLabel.text = media.channel?.title
-    if let imageUrl = URL(string: media.coverAsset?.url ?? "") {
+  func setup() {
+    coverImage.contentMode = .scaleAspectFill
+    coverImage.layer.masksToBounds = true
+    coverImage.layer.cornerRadius = 15
+  }
+  
+}
+
+extension EpisodesCollectionViewCell: ConfigurableCell {
+  func configure(model: Media) {
+    titleLabel.text = model.title
+    subTitleLabel.text = model.channel?.title
+    if let imageUrl = URL(string: model.coverAsset?.url ?? "") {
       coverImage.kf.setImage(with: imageUrl)
     }
   }
-
+  
 }

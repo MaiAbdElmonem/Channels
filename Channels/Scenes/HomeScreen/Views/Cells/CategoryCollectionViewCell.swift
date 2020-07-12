@@ -11,26 +11,20 @@ import UIKit
 class CategoryCollectionViewCell: UICollectionViewCell {
   @IBOutlet private weak var categoryNameLabel: UILabel!
   
-    override func awakeFromNib() {
-        super.awakeFromNib()
-      self.layer.cornerRadius = self.frame.height / 2
-      categoryNameLabel.adjustsFontForContentSizeCategory = true
-    }
-  func configure(with categorey: Category) {
-    categoryNameLabel.text = categorey.name
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    setup()
   }
   
-//  func configure() {
-//
-//         self.backgroundColor = Asset.Colors.tunaColor.color
-//         self.layer.cornerRadius = self.frame.height / 2
-//         titleLabel.font = FontFamily.Gilroy.extraBold.font(size: 18)
-//         categoryNameLabel.adjustsFontForContentSizeCategory = true
-//         categoryNameLabel.textColor = UIColor.white
-//     }
-     
-//     func configure(with categorey: CatListDiffable) {
-//      categoryNameLabel.text = categorey.text
-//     }
+  func setup() {
+    self.layer.cornerRadius = self.frame.height / 2
+    categoryNameLabel.adjustsFontForContentSizeCategory = true
+  }
+  
+}
 
+extension CategoryCollectionViewCell: ConfigurableCell {
+  func configure(model: Category) {
+    categoryNameLabel.text = model.name
+  }  
 }

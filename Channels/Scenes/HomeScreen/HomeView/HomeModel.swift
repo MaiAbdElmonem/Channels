@@ -51,23 +51,13 @@ class HomeModel: BaseModel, HomeModelProtocol {
       }
     }
   }
-  
+
 }
 
 // generic with compilation//
 
 // func getCategories() -> Promise<[Category]> {
 //    return Promise { seal in
-//      NetworkManager.shared.request(HomeService.categories).done {(result: APIResponse<ResponseData>) in
-//        guard let categories = result.data?.categories
-//          else { return }
-//        seal.fulfill(categories)
-//      }.catch { error in
-//        print(error)
-//        seal.reject(NetworkError.parseError)
-//      }
-//
-//    }
 //          NetworkManager.shared.genericFetch(
 //            target: HomeService.categories,
 //            completion: { (result: Swift.Result<APIResponse<ResponseData>, NetworkError>, _) in

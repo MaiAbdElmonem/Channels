@@ -18,21 +18,10 @@ extension NetworkManager {
         switch result {
         case .success(let response):
           if (200...299 ~= response.statusCode) {
-            do {
-              let result = try JSONDecoder().decode(T.self, from: response.data)
-              resolver.fulfill(result)
-            } catch {
-              resolver.reject(NetworkError.parseError)
-            }
+            self.successResponse(response: response, resolver: resolver)
           } else {
             // 300-399 ,400-499
-            do {
-              var businessError = try JSONDecoder().decode(NetworkError.self, from: response.data)
-              businessError.type = .business
-              resolver.reject(NetworkError.parseError)
-            } catch {
-              resolver.reject(NetworkError.parseError)
-            }
+            self.failureResponse(response: response, resolver: resolver)
           }
           
         case .failure(let error):
@@ -44,31 +33,19 @@ extension NetworkManager {
   }
   
   // using completion
-  func genericFetch<T: Codable>(target: TargetType, completion: @escaping (
-    _ result: Swift.Result<T, NetworkError>,
-    _ statusCode: StatusCode?
-    ) -> Void) {
+  typealias NetworkCallback<T: Codable> = (_ result: Swift.Result<T, NetworkError>,
+    _ statusCode: StatusCode?) -> Void
+  
+  func genericFetch<T: Codable>(target: TargetType, completion: @escaping NetworkCallback<T>) {
     
     provider.request(MultiTarget(target)) { (result) in
       switch result {
       case .success(let response):
         if (200...299 ~= response.statusCode) {
-          do {
-            let result = try JSONDecoder().decode(T.self, from: response.data)
-            completion(.success(result), response.statusCode)
-
-          } catch {
-            completion(.failure(NetworkError.parseError), response.statusCode)
-          }
+          self.successResponse(response: response, callback: completion)
         } else {
           // 300-399 ,400-499
-          do {
-            var businessError = try JSONDecoder().decode(NetworkError.self, from: response.data)
-            businessError.type = .business
-            completion(.failure(businessError), response.statusCode)
-          } catch {
-            completion(.failure(NetworkError.parseError), response.statusCode)
-          }
+          self.failureResponse(response: response, callback: completion)
         }
         
       case .failure(let error):
@@ -78,4 +55,43 @@ extension NetworkManager {
     }
     
   }
+  
+  func successResponse<T: Codable>(response: Moya.Response, callback: @escaping NetworkCallback<T>) {
+    do {
+      let result = try JSONDecoder().decode(T.self, from: response.data)
+      callback(.success(result), response.statusCode)
+    } catch {
+      callback(.failure(NetworkError.parseError), response.statusCode)
+    }
+  }
+  
+  func failureResponse<T: Codable>(response: Moya.Response, callback: @escaping NetworkCallback<T>) {
+    do {
+      var businessError = try JSONDecoder().decode(NetworkError.self, from: response.data)
+      businessError.type = .business
+      callback(.failure(businessError), response.statusCode)
+    } catch {
+      callback(.failure(NetworkError.parseError), response.statusCode)
+    }
+  }
+  
+  func failureResponse<T: Codable>(response: Moya.Response, resolver: Resolver<T>) {
+    do {
+      var businessError = try JSONDecoder().decode(NetworkError.self, from: response.data)
+      businessError.type = .business
+      resolver.reject(NetworkError.parseError)
+    } catch {
+      resolver.reject(NetworkError.parseError)
+    }
+  }
+  
+  func successResponse<T: Codable>(response: Moya.Response, resolver: Resolver<T>) {
+    do {
+      let result = try JSONDecoder().decode(T.self, from: response.data)
+      resolver.fulfill(result)
+    } catch {
+      resolver.reject(NetworkError.parseError)
+    }
+  }
+  
 }

@@ -15,7 +15,6 @@
 		2D0D988524585D2B0021CAFA /* EmbeddedSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D988324585D2B0021CAFA /* EmbeddedSectionController.swift */; };
 		2D0D988824585DD70021CAFA /* EpisodesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D0D988624585DD70021CAFA /* EpisodesCollectionViewCell.xib */; };
 		2D0D988924585DD70021CAFA /* EpisodesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D988724585DD70021CAFA /* EpisodesCollectionViewCell.swift */; };
-		2D1323C3242B8DA300C43D78 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1323C2242B8DA300C43D78 /* Images.xcassets */; };
 		2D1323C8242B9B0F00C43D78 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1323C7242B9B0F00C43D78 /* Enviroment.swift */; };
 		2D18D93B248ADE1D00F3B969 /* HomeSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D18D93A248ADE1D00F3B969 /* HomeSectionController.swift */; };
 		2D18D93D248AEE1000F3B969 /* HorizontalCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D18D93C248AEE1000F3B969 /* HorizontalCollectionViewAdapter.swift */; };
@@ -110,7 +109,6 @@
 		2D0D988324585D2B0021CAFA /* EmbeddedSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmbeddedSectionController.swift; sourceTree = "<group>"; };
 		2D0D988624585DD70021CAFA /* EpisodesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpisodesCollectionViewCell.xib; sourceTree = "<group>"; };
 		2D0D988724585DD70021CAFA /* EpisodesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodesCollectionViewCell.swift; sourceTree = "<group>"; };
-		2D1323C2242B8DA300C43D78 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2D1323C4242B8DF400C43D78 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		2D1323C5242B8E0500C43D78 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		2D1323C7242B9B0F00C43D78 /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
@@ -203,7 +201,6 @@
 		2D1323BE242B7E5800C43D78 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				2D1323C2242B8DA300C43D78 /* Images.xcassets */,
 				2D1323C4242B8DF400C43D78 /* Staging.xcconfig */,
 				2D1323C5242B8E0500C43D78 /* Production.xcconfig */,
 				2D1323C7242B9B0F00C43D78 /* Enviroment.swift */,
@@ -625,7 +622,6 @@
 			files = (
 				2D9C517E244EFCCE0077BF3C /* Channels.Success.json in Resources */,
 				2DD8281C24299159004F2738 /* LaunchScreen.storyboard in Resources */,
-				2D1323C3242B8DA300C43D78 /* Images.xcassets in Resources */,
 				2D0D987C245854FC0021CAFA /* CategoryCollectionViewCell.xib in Resources */,
 				2D9C517C244EFCC60077BF3C /* Category.Success.json in Resources */,
 				2DAD66B924338F6F00D5D533 /* Gotu-Regular.ttf in Resources */,

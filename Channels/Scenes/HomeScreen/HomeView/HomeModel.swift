@@ -58,7 +58,7 @@ class HomeModel: BaseModel, HomeModelProtocol {
 
 // func getCategories() -> Promise<[Category]> {
 //    return Promise { seal in
-//          NetworkManager.shared.genericFetch(
+//          NetworkManager.shared.parseResponse(
 //            target: HomeService.categories,
 //            completion: { (result: Swift.Result<APIResponse<ResponseData>, NetworkError>, _) in
 //              switch result {

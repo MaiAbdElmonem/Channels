@@ -32,7 +32,7 @@ class AppManager: NSObject {
     window.rootViewController = vc
     window.makeKeyAndVisible()
     self.shared.window = window
-    self.shared.setGlobalFontAppearance()
+    AppFont.setGlobalFontAppearance()
     self.shared.setupNetworking()
   }
   
@@ -43,7 +43,7 @@ class AppManager: NSObject {
     window.rootViewController = vc
     window.makeKeyAndVisible()
     self.shared.window = window
-    self.shared.setGlobalFontAppearance()
+    AppFont.setGlobalFontAppearance()
     self.shared.setupNetworking()
   }
   
@@ -53,13 +53,6 @@ class AppManager: NSObject {
   
   func setupNetworking() {
     NetworkManager.shared = NetworkManager(config: NetworkDefaults())
-  }
-  
-  func setGlobalFontAppearance() {
-    let customFont = FontFamily.Gotu.regular.font(size: 40) ?? UIFont.systemFont(ofSize: 20)
-    UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: customFont], for: .normal)
-    UITextField.appearance().substituteFontName = FontFamily.Gotu.regular.family
-    UILabel.appearance().substituteFontName = FontFamily.Gotu.regular.family
   }
   
 }

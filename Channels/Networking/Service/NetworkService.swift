@@ -36,7 +36,7 @@ extension NetworkManager {
   typealias NetworkCallback<T: Codable> = (_ result: Swift.Result<T, NetworkError>,
     _ statusCode: StatusCode?) -> Void
   
-  func genericFetch<T: Codable>(target: TargetType, completion: @escaping NetworkCallback<T>) {
+  func parseResponse<T: Codable>(target: TargetType, completion: @escaping NetworkCallback<T>) {
     
     provider.request(MultiTarget(target)) { (result) in
       switch result {

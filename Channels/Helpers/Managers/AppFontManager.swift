@@ -32,3 +32,13 @@ extension UITextView {
     set { self.font = UIFont(name: newValue, size: 16) }
   }
 }
+
+class AppFont {
+  
+static func setGlobalFontAppearance() {
+   let customFont = FontFamily.Gotu.regular.font(size: 40) ?? UIFont.systemFont(ofSize: 20)
+   UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: customFont], for: .normal)
+   UITextField.appearance().substituteFontName = FontFamily.Gotu.regular.family
+   UILabel.appearance().substituteFontName = FontFamily.Gotu.regular.family
+ }
+}

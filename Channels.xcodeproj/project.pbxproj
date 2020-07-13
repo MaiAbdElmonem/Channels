@@ -15,7 +15,6 @@
 		2D0D988524585D2B0021CAFA /* EmbeddedSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D988324585D2B0021CAFA /* EmbeddedSectionController.swift */; };
 		2D0D988824585DD70021CAFA /* EpisodesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D0D988624585DD70021CAFA /* EpisodesCollectionViewCell.xib */; };
 		2D0D988924585DD70021CAFA /* EpisodesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D988724585DD70021CAFA /* EpisodesCollectionViewCell.swift */; };
-		2D1323C3242B8DA300C43D78 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1323C2242B8DA300C43D78 /* Images.xcassets */; };
 		2D1323C8242B9B0F00C43D78 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1323C7242B9B0F00C43D78 /* Enviroment.swift */; };
 		2D18D93B248ADE1D00F3B969 /* HomeSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D18D93A248ADE1D00F3B969 /* HomeSectionController.swift */; };
 		2D18D93D248AEE1000F3B969 /* HorizontalCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D18D93C248AEE1000F3B969 /* HorizontalCollectionViewAdapter.swift */; };
@@ -44,6 +43,7 @@
 		2D78AC10242A395B0036C674 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D78AC0F242A395B0036C674 /* Fonts.swift */; };
 		2D78AC12242A396F0036C674 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D78AC11242A396E0036C674 /* Localized.swift */; };
 		2D7EDFC5244E701B00213F28 /* CollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7EDFC4244E701B00213F28 /* CollectionView+Extensions.swift */; };
+		2D8F9CDD24B5454A0031212E /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8F9CDC24B5454A0031212E /* ConfigurableCell.swift */; };
 		2D9207FF2454DF7700D6BAC3 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9207FD2454DF7700D6BAC3 /* ChannelViewController.swift */; };
 		2D9208002454DF7700D6BAC3 /* ChannelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D9207FE2454DF7700D6BAC3 /* ChannelViewController.xib */; };
 		2D936EF924329F680038CA9C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D936EF724329F680038CA9C /* SplashViewController.swift */; };
@@ -109,7 +109,6 @@
 		2D0D988324585D2B0021CAFA /* EmbeddedSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmbeddedSectionController.swift; sourceTree = "<group>"; };
 		2D0D988624585DD70021CAFA /* EpisodesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpisodesCollectionViewCell.xib; sourceTree = "<group>"; };
 		2D0D988724585DD70021CAFA /* EpisodesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodesCollectionViewCell.swift; sourceTree = "<group>"; };
-		2D1323C2242B8DA300C43D78 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2D1323C4242B8DF400C43D78 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		2D1323C5242B8E0500C43D78 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		2D1323C7242B9B0F00C43D78 /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
@@ -141,6 +140,7 @@
 		2D78AC0F242A395B0036C674 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		2D78AC11242A396E0036C674 /* Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
 		2D7EDFC4244E701B00213F28 /* CollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		2D8F9CDC24B5454A0031212E /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 		2D9207FD2454DF7700D6BAC3 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		2D9207FE2454DF7700D6BAC3 /* ChannelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelViewController.xib; sourceTree = "<group>"; };
 		2D936EF724329F680038CA9C /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -201,7 +201,6 @@
 		2D1323BE242B7E5800C43D78 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				2D1323C2242B8DA300C43D78 /* Images.xcassets */,
 				2D1323C4242B8DF400C43D78 /* Staging.xcconfig */,
 				2D1323C5242B8E0500C43D78 /* Production.xcconfig */,
 				2D1323C7242B9B0F00C43D78 /* Enviroment.swift */,
@@ -294,6 +293,14 @@
 				2DB3BA992470970B00C8A4DC /* NetworkService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		2D8F9CDB24B544B00031212E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2D8F9CDC24B5454A0031212E /* ConfigurableCell.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		2D936EFB24329F700038CA9C /* SplashScreen */ = {
@@ -480,6 +487,7 @@
 		2DD2A98F242A0B50004E4E38 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2D8F9CDB24B544B00031212E /* Protocols */,
 				2D9C5173244EEF970077BF3C /* Managers */,
 				2DD2A990242A0B84004E4E38 /* Constants */,
 			);
@@ -614,7 +622,6 @@
 			files = (
 				2D9C517E244EFCCE0077BF3C /* Channels.Success.json in Resources */,
 				2DD8281C24299159004F2738 /* LaunchScreen.storyboard in Resources */,
-				2D1323C3242B8DA300C43D78 /* Images.xcassets in Resources */,
 				2D0D987C245854FC0021CAFA /* CategoryCollectionViewCell.xib in Resources */,
 				2D9C517C244EFCC60077BF3C /* Category.Success.json in Resources */,
 				2DAD66B924338F6F00D5D533 /* Gotu-Regular.ttf in Resources */,
@@ -699,6 +706,7 @@
 			files = (
 				2DC6421B247DCF580010D759 /* BaseAdapterProtocal.swift in Sources */,
 				2DB0BFB5245F973D0057DCE5 /* FooterView.swift in Sources */,
+				2D8F9CDD24B5454A0031212E /* ConfigurableCell.swift in Sources */,
 				2D9C5182244F06D00077BF3C /* CoverAsset.swift in Sources */,
 				2D78AC01242A266D0036C674 /* NetworkDefaults.swift in Sources */,
 				2D0C6476242A149400F2E1E1 /* AppManager.swift in Sources */,

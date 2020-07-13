@@ -39,7 +39,7 @@ final class EmbeddedSectionController: ListSectionController {
       }
         guard let media = eposides?.items?[index] as? Media else { return UICollectionViewCell() }
 
-        cell.configure(with: media)
+        cell.configure(model: media)
                return cell
   }
     override func didUpdate(to object: Any) {

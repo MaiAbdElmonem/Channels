@@ -28,10 +28,10 @@ class ChannelViewController: BaseViewController {
 //    homeAdaptor = HomeDataSource(view: self, collectionView: channelCollectionView)
     setupView()
   }
-  
+    
   override func viewWillAppear(_ animated: Bool) {
          super.viewWillAppear(animated)
-         adapter.performUpdates(animated: true, completion: nil)
+//         adapter.performUpdates(animated: true, completion: nil)
      }
   
   private func setupView() {
@@ -44,5 +44,6 @@ class ChannelViewController: BaseViewController {
 extension ChannelViewController: HomeViewProtocol {
   func getHomeList(with data: [Section]) {
     homeAdaptor.add(items: data)
+    adapter.performUpdates(animated: true, completion: nil)
   } 
 }

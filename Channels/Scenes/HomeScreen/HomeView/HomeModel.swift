@@ -8,10 +8,80 @@
 
 import Foundation
 import Moya
+import PromiseKit
 
 class HomeModel: BaseModel, HomeModelProtocol {
+  func getChannels() -> Promise<[Channel]> {
+    return Promise { seal in
+      NetworkManager.shared.request(HomeService.channel).done {(result: APIResponse<ResponseData>) in
+        guard let channels = result.data?.channels
+          else { return }
+        seal.fulfill(channels)
+      }.catch { error in
+        print(error)
+        seal.reject(NetworkError.parseError)
+      }
+      
+    }
+  }
   
-//   to get generic model
+  func getEpisodes() -> Promise<[Media]> {
+    return Promise { seal in
+      NetworkManager.shared.request(HomeService.episodes).done {(result: APIResponse<ResponseData>) in
+        guard let episodes = result.data?.media
+          else { return }
+        seal.fulfill(episodes)
+      }.catch { error in
+        print(error)
+        seal.reject(NetworkError.parseError)
+      }
+    }
+  
+  }
+  
+  func getCategories() -> Promise<[Category]> {
+    return Promise { seal in
+      NetworkManager.shared.request(HomeService.categories).done {(result: APIResponse<ResponseData>) in
+        guard let categories = result.data?.categories
+          else { return }
+        seal.fulfill(categories)
+      }.catch { error in
+        print(error)
+        seal.reject(NetworkError.parseError)
+      }
+    }
+  }
+
+}
+
+// generic with compilation//
+
+// func getCategories() -> Promise<[Category]> {
+//    return Promise { seal in
+//          NetworkManager.shared.parseResponse(
+//            target: HomeService.categories,
+//            completion: { (result: Swift.Result<APIResponse<ResponseData>, NetworkError>, _) in
+//              switch result {
+//                       case .success(let res):
+//                        guard let categories = res.data?.categories
+//                           else {
+//                           return
+//                         }
+//                         seal.fulfill(categories)
+//                       case .failure(_):
+//                         seal.reject(NetworkError.parseError)
+//                       }
+//1          do {
+//1            guard let categories = try result.get().data?.categories else { return }
+//1            seal.fulfill(categories)
+//1          } catch {
+//1            seal.reject(NetworkError.parseError)
+//1          }
+// })
+// }
+
+//   to get generic one model
+
 //  func get(target: TargetType, completion: @escaping (Result<ResponseData, NetworkError>) -> Void) {
 //    NetworkManager.shared.genericFetch(
 //      target: target, completion: { (result: Result<APIResponse<ResponseData>, NetworkError>, _) in
@@ -24,55 +94,3 @@ class HomeModel: BaseModel, HomeModelProtocol {
 //        }
 //      })
 //  }
-  
-  func getChannels() -> [Channel] {
-    if let path = Bundle.main.path(forResource: "Channels.Success", ofType: "json") {
-      let decoder = JSONDecoder()
-      do {
-        guard let data = try? String(contentsOfFile: path).data(using: .utf8) else { return [Channel]() }
-        let dataStored = try decoder.decode(APIResponse<ResponseData>.self, from: data)
-        guard let channels = dataStored.data?.channels else { return [Channel]() }
-        return channels
-      } catch let error {
-        print("parse error: \(error)")
-      }
-    } else {
-      print("Invalid filename/path.")
-    }
-    return [Channel]()
-  }
-  
-  func getEpisodes() -> [Media] {
-    if let path = Bundle.main.path(forResource: "Episodes.Success", ofType: "json") {
-      let decoder = JSONDecoder()
-      do {
-        guard let data = try? String(contentsOfFile: path).data(using: .utf8) else { return [Media]() }
-        let dataStored = try decoder.decode(APIResponse<ResponseData>.self, from: data)
-        guard let media = dataStored.data?.media else { return [Media]() }
-        return media
-      } catch let error {
-        print("parse error: \(error.localizedDescription)")
-      }
-    } else {
-      print("Invalid filename/path.")
-    }
-    return [Media]()
-  }
-  
-  func getCategories() -> [Category] {
-    if let path = Bundle.main.path(forResource: "Category.Success", ofType: "json") {
-      let decoder = JSONDecoder()
-      do {
-        guard let data = try? String(contentsOfFile: path).data(using: .utf8) else { return [Category]() }
-        let dataStored = try decoder.decode(APIResponse<ResponseData>.self, from: data)
-        guard let categories = dataStored.data?.categories else { return [Category]() }
-        return categories
-      } catch let error {
-        print("parse error: \(error.localizedDescription)")
-      }
-    } else {
-      print("Invalid filename/path.")
-    }
-    return [Category]()
-  }
-}

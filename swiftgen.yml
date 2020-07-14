@@ -21,12 +21,7 @@ fonts:
 xcassets:
   inputs:
     - Resources/Assets/Assets.xcassets
-  outputs:
-    templateName: swift4
-    output: Resources/Assets/Assets.swift
-colors:
-  inputs:
     - Resources/Colors/Colors.xcassets
   outputs:
     templateName: swift4
-    output: Resources/Colors/Colors.swift
+    output: Resources/Assets/Assets.swift

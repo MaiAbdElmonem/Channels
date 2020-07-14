@@ -20,14 +20,12 @@
 		2D18D93D248AEE1000F3B969 /* HorizontalCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D18D93C248AEE1000F3B969 /* HorizontalCollectionViewAdapter.swift */; };
 		2D18D93F248B1C1900F3B969 /* LatestMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D18D93E248B1C1900F3B969 /* LatestMedia.swift */; };
 		2D18D943248B411D00F3B969 /* SupplementaryViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D18D942248B411D00F3B969 /* SupplementaryViewAdapter.swift */; };
+		2D27371A24BE44DE007F2433 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D27371924BE44DE007F2433 /* Colors.xcassets */; };
 		2D2D14F824804F4100DB17A4 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2D14F724804F4100DB17A4 /* SectionModel.swift */; };
-		2D4F219B244C8F5B00739CAC /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D4F219A244C8F5B00739CAC /* Colors.xcassets */; };
 		2D4F219D244C909700739CAC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F219C244C909600739CAC /* Colors.swift */; };
 		2D613E9C2439447D00C2E54B /* AppFontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D613E9B2439447D00C2E54B /* AppFontManager.swift */; };
 		2D662FD2244E563000023287 /* ChannelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D662FD0244E563000023287 /* ChannelsViewController.swift */; };
 		2D662FD3244E563000023287 /* ChannelsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D662FD1244E563000023287 /* ChannelsViewController.xib */; };
-		2D74B5F9244CE1A80009C4CE /* IGListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D4F219F244CA68900739CAC /* IGListKit.framework */; };
-		2D74B600244CE53E0009C4CE /* IGListDiffKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D74B5FC244CE4F80009C4CE /* IGListDiffKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		2D74B601244CE53E0009C4CE /* IGListDiffKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D74B5FC244CE4F80009C4CE /* IGListDiffKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2D74B606244D05E70009C4CE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D74B605244D05E70009C4CE /* HomeView.swift */; };
 		2D74B608244D0A680009C4CE /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D74B607244D0A680009C4CE /* UIView+Extensions.swift */; };
@@ -116,8 +114,8 @@
 		2D18D942248B411D00F3B969 /* SupplementaryViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplementaryViewAdapter.swift; sourceTree = "<group>"; };
 		2D27371124BE39B9007F2433 /* Category.Success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Category.Success.json; sourceTree = "<group>"; };
 		2D27371224BE39B9007F2433 /* Channels.Success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Channels.Success.json; sourceTree = "<group>"; };
+		2D27371924BE44DE007F2433 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2D2D14F724804F4100DB17A4 /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
-		2D4F219A244C8F5B00739CAC /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2D4F219C244C909600739CAC /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		2D4F219F244CA68900739CAC /* IGListKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IGListKit.framework; path = Carthage/Build/iOS/IGListKit.framework; sourceTree = "<group>"; };
 		2D4F21A4244CC04400739CAC /* CarthageInput.xcfilelist */ = {isa = PBXFileReference; lastKnownFileType = text.xcfilelist; path = CarthageInput.xcfilelist; sourceTree = "<group>"; };
@@ -188,8 +186,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D74B600244CE53E0009C4CE /* IGListDiffKit.framework in Frameworks */,
-				2D74B5F9244CE1A80009C4CE /* IGListKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				2D4F219C244C909600739CAC /* Colors.swift */,
-				2D4F219A244C8F5B00739CAC /* Colors.xcassets */,
+				2D27371924BE44DE007F2433 /* Colors.xcassets */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -620,6 +616,7 @@
 			files = (
 				2DD8281C24299159004F2738 /* LaunchScreen.storyboard in Resources */,
 				2D0D987C245854FC0021CAFA /* CategoryCollectionViewCell.xib in Resources */,
+				2D27371A24BE44DE007F2433 /* Colors.xcassets in Resources */,
 				2DAD66B924338F6F00D5D533 /* Gotu-Regular.ttf in Resources */,
 				2DB0BFB6245F973D0057DCE5 /* FooterView.xib in Resources */,
 				2D0D988824585DD70021CAFA /* EpisodesCollectionViewCell.xib in Resources */,
@@ -628,7 +625,6 @@
 				2D936EFA24329F680038CA9C /* SplashViewController.xib in Resources */,
 				2D9208002454DF7700D6BAC3 /* ChannelViewController.xib in Resources */,
 				2D662FD3244E563000023287 /* ChannelsViewController.xib in Resources */,
-				2D4F219B244C8F5B00739CAC /* Colors.xcassets in Resources */,
 				2D9C517A244EFCBA0077BF3C /* Episodes.Success.json in Resources */,
 				2DD8281924299159004F2738 /* Assets.xcassets in Resources */,
 			);

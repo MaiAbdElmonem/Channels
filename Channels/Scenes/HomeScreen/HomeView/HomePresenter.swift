@@ -35,7 +35,7 @@ BasePresenter<View, Model>, HomePresenterProtocol {
       // display ui according to this order
       sections.append(Section(headers: episodes, items: episodes))
       for channel in channels {
-        sections.append(Section(headers: channels, items: channel.latestMedia ?? []))
+        sections.append(Section(headers: [channel], items: channel.latestMedia ?? []))
       }
       sections.append(Section(headers: categories, items: categories))
        self.view?.getHomeList(with: sections)

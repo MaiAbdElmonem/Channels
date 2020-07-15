@@ -25,7 +25,7 @@ class HomeSectionController: ListSectionController {
           supplementaryViewSource = self
       }
   
-  func getSectionHeaderType() -> Any? {
+  func getSectionHeaderType() -> [Any]? {
     data?.headers
   }
   
@@ -68,9 +68,9 @@ class HomeSectionController: ListSectionController {
     let width = collectionContext?.containerSize.width ?? 0
     let height = collectionContext?.containerSize.height ?? 0
     if let sectionType = getSectionType() as? [Media] {
-      self.inset = UIEdgeInsets(top: 5, left: 30, bottom: 0, right: 0)
+      self.inset = UIEdgeInsets(top: 10, left: 30, bottom: 0, right: 0)
       if sectionType.first?.type == "video" {
-        return CGSize(width: width * 2.3, height: height / 2.5)
+        return CGSize(width: width * 2, height: height / 2.5)
       } else {
         return CGSize(width: width, height: height / 2)
       }

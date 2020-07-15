@@ -31,29 +31,23 @@ extension HomeSectionController: ListSupplementaryViewSource {
   }
   
   private func homeHeaderView(atIndex index: Int) -> UICollectionReusableView {
-    if ((getSectionType() as? [Category]) != nil) {
-      guard let view = collectionContext?.dequeueReusableSupplementaryView(
-        ofKind: UICollectionView.elementKindSectionHeader,
-        for: self, nibName: "HeaderView", bundle: nil,
-        at: index) as? HeaderView else {
-          fatalError("no categories section header")
-      }
-      view.titleLabel.text = "Browse by categories"
-      view.subtitleLabel.isHidden = true
+    guard let view = collectionContext?.dequeueReusableSupplementaryView(
+      ofKind: UICollectionView.elementKindSectionHeader,
+      for: self, nibName: "HeaderView", bundle: nil,
+      at: index) as? HeaderView else {
+        fatalError("No section header")
+    }
+    if ((getSectionHeaderType() as? [Media]) != nil) {
+      view.configureEpisodeHeader()
+      return view
+    } else if ((getSectionHeaderType() as? [Category]) != nil) {
+      view.configureCategoryHeader()
+      return view
+    } else {
+      guard let channelHeaders = getSectionHeaderType()?[index] as? Channel else { return UICollectionViewCell() }
+      view.configure(model: channelHeaders)
       return view
     }
-    if ((getSectionType() as? [Media]) != nil) {
-      guard let view = collectionContext?.dequeueReusableSupplementaryView(
-        ofKind: UICollectionView.elementKindSectionHeader,
-        for: self, nibName: "HeaderView", bundle: nil,
-        at: index) as? HeaderView else {
-          fatalError("no categories section header")
-      }
-      guard let mediaHeaders = data.items?[index] as? Media else { return UICollectionViewCell() }
-      view.configureHeader(sectionType: mediaHeaders)           
-      return view
-    }
-    return UICollectionReusableView()
   }
   
   private func homeFooterView(atIndex index: Int) -> UICollectionReusableView {

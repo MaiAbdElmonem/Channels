@@ -26,21 +26,3 @@ class Section: ListDiffable {
     self.items = items
   }
 }
-
-class EpisodeSection: ListDiffable {
-  private var identifier: String = UUID().uuidString
-  func diffIdentifier() -> NSObjectProtocol {
-    return identifier as NSString
-  }
-  
-  func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
-    return true
-  }
-  var sectionTitle: String = ""
-  
-  var media: [Media]?
-  
-  init(media: [Media]) {
-    self.media = media
-  }
-}

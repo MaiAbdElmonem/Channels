@@ -22,7 +22,8 @@ class EpisodesCollectionViewCell: UICollectionViewCell {
   func setup() {
     coverImage.contentMode = .scaleAspectFill
     coverImage.layer.masksToBounds = true
-    coverImage.layer.cornerRadius = 15
+    coverImage.layer.cornerRadius = 8
+    subTitleLabel.font = UIFont.systemFont(ofSize: 15)
   }
   
 }

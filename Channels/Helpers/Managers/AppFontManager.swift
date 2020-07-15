@@ -14,7 +14,7 @@ extension UILabel {
     get { return self.font.fontName }
     set {
       //get new name  of font
-      self.font = UIFont(name: newValue, size: 16)
+      self.font = UIFont(name: newValue, size: 17)
     }
   }
 }

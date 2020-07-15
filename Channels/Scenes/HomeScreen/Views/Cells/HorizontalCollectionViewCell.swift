@@ -15,6 +15,7 @@ class HorizontalCollectionViewCell: UICollectionViewCell {
            let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
       view.backgroundColor = .blue
            view.backgroundColor = .clear
+           view.showsHorizontalScrollIndicator = false
            view.alwaysBounceVertical = false
            view.alwaysBounceHorizontal = true
            self.contentView.addSubview(view)

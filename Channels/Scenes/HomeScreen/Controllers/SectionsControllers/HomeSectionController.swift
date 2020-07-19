@@ -45,24 +45,24 @@ class HomeSectionController: ListSectionController {
     if ((getSectionType() as? [Media]) != nil) {
       guard let cell = collectionContext?.dequeueReusableCell(of: HorizontalCollectionViewCell.self, for: self,
                                                               at: index) as? HorizontalCollectionViewCell else {
-                                                                             fatalError("collectionView cell failed")
-                 }
-        adapter.collectionView = cell.horizontalCollectionView
-                 return cell
+                                                                fatalError("collectionView cell failed")
       }
-    
-      if ((getSectionType() as? [Category]) != nil) {
-    guard let cell = collectionContext?.dequeueReusableCell(withNibName: "CategoryCollectionViewCell", bundle: nil,
-                                                            for: self,
-                                                            at: index) as? CategoryCollectionViewCell else {
-                                                                        fatalError("categories cell failed")
-            }
-          guard let categories = data?.items?[index] as? Category else { return UICollectionViewCell() }
-      cell.configure(model: categories)
-               return cell
-      }
-    return UICollectionViewCell()
+      adapter.collectionView = cell.horizontalCollectionView
+      return cell
     }
+    
+    if ((getSectionType() as? [Category]) != nil) {
+      guard let cell = collectionContext?.dequeueReusableCell(
+        of: CategoryCollectionViewCell.self,
+        for: self, at: index) as? CategoryCollectionViewCell else {
+          fatalError("categories cell failed")
+      }
+      guard let categories = data?.items?[index] as? Category else { return UICollectionViewCell() }
+      cell.configure(model: categories)
+      return cell
+    }
+    return UICollectionViewCell()
+  }
   
   override func sizeForItem(at index: Int) -> CGSize {
     let width = collectionContext?.containerSize.width ?? 0

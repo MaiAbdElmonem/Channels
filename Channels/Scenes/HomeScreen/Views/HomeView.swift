@@ -36,7 +36,7 @@ class HomeView: UIView {
   }
   
   func setBackground() {
-    collectionView.backgroundColor = .red
+    collectionView.backgroundColor = #colorLiteral(red: 0.1771532893, green: 0.2037745118, blue: 0.2371588945, alpha: 1)
   }
   
   func addSubView() {

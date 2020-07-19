@@ -11,16 +11,23 @@ import IGListKit
 
 class ChannelViewController: BaseViewController {
   
-  @IBOutlet private weak var channelCollectionView: UICollectionView!
   // MARK: - Presenter
   private var presenter: HomePresenterProtocol?
   func setPresenter(presenter: HomePresenterProtocol) {
     self.presenter = presenter
   }
+  // MARK: - load view
+  private lazy var mainView: HomeView = {
+    return HomeView()
+  }()
+  
   var homeAdaptor = HomeAdapter()
   lazy var adapter: ListAdapter = {
     return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
   }()
+  override func loadView() {
+      view = mainView
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -35,8 +42,10 @@ class ChannelViewController: BaseViewController {
      }
   
   private func setupView() {
-    adapter.collectionView = channelCollectionView
+    adapter.collectionView = mainView.collectionView
     adapter.dataSource = homeAdaptor
+    //view of this controller
+    view.addSubview(mainView.collectionView)
   }
   
 }

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2D0C6476242A149400F2E1E1 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0C6475242A149400F2E1E1 /* AppManager.swift */; };
 		2D0C6478242A14A700F2E1E1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0C6477242A14A600F2E1E1 /* Router.swift */; };
-		2D0D987C245854FC0021CAFA /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D0D987A245854FC0021CAFA /* CategoryCollectionViewCell.xib */; };
 		2D0D987D245854FC0021CAFA /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D987B245854FC0021CAFA /* CategoryCollectionViewCell.swift */; };
 		2D0D988424585D2B0021CAFA /* HorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D988224585D2B0021CAFA /* HorizontalCollectionViewCell.swift */; };
 		2D0D988524585D2B0021CAFA /* EmbeddedSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D988324585D2B0021CAFA /* EmbeddedSectionController.swift */; };
@@ -42,7 +41,6 @@
 		2D7EDFC5244E701B00213F28 /* CollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7EDFC4244E701B00213F28 /* CollectionView+Extensions.swift */; };
 		2D8F9CDD24B5454A0031212E /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8F9CDC24B5454A0031212E /* ConfigurableCell.swift */; };
 		2D9207FF2454DF7700D6BAC3 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9207FD2454DF7700D6BAC3 /* ChannelViewController.swift */; };
-		2D9208002454DF7700D6BAC3 /* ChannelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D9207FE2454DF7700D6BAC3 /* ChannelViewController.xib */; };
 		2D936EF924329F680038CA9C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D936EF724329F680038CA9C /* SplashViewController.swift */; };
 		2D936EFA24329F680038CA9C /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D936EF824329F680038CA9C /* SplashViewController.xib */; };
 		2D9C5172244EEF310077BF3C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C5171244EEF310077BF3C /* Category.swift */; };
@@ -98,7 +96,6 @@
 /* Begin PBXFileReference section */
 		2D0C6475242A149400F2E1E1 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		2D0C6477242A14A600F2E1E1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		2D0D987A245854FC0021CAFA /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		2D0D987B245854FC0021CAFA /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		2D0D988224585D2B0021CAFA /* HorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
 		2D0D988324585D2B0021CAFA /* EmbeddedSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmbeddedSectionController.swift; sourceTree = "<group>"; };
@@ -138,7 +135,6 @@
 		2D7EDFC4244E701B00213F28 /* CollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		2D8F9CDC24B5454A0031212E /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 		2D9207FD2454DF7700D6BAC3 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
-		2D9207FE2454DF7700D6BAC3 /* ChannelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelViewController.xib; sourceTree = "<group>"; };
 		2D936EF724329F680038CA9C /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		2D936EF824329F680038CA9C /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		2D9C5171244EEF310077BF3C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -228,12 +224,17 @@
 			path = DiffableHomeScreen;
 			sourceTree = "<group>";
 		};
+		2D6AA7F724C3BA3400A99CD9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2D9207FD2454DF7700D6BAC3 /* ChannelViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		2D74B604244D05830009C4CE /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
-				2D74B605244D05E70009C4CE /* HomeView.swift */,
-				2D9207FD2454DF7700D6BAC3 /* ChannelViewController.swift */,
-				2D9207FE2454DF7700D6BAC3 /* ChannelViewController.xib */,
 				2DB3BA9B2470A08700C8A4DC /* HomeModel.swift */,
 				2DB3BA9D2470A09500C8A4DC /* HomePresenter.swift */,
 				2D74B609244D1A570009C4CE /* HomeAdapter.swift */,
@@ -259,7 +260,6 @@
 			children = (
 				2D0D988224585D2B0021CAFA /* HorizontalCollectionViewCell.swift */,
 				2D0D987B245854FC0021CAFA /* CategoryCollectionViewCell.swift */,
-				2D0D987A245854FC0021CAFA /* CategoryCollectionViewCell.xib */,
 				2D0D988724585DD70021CAFA /* EpisodesCollectionViewCell.swift */,
 				2D0D988624585DD70021CAFA /* EpisodesCollectionViewCell.xib */,
 			);
@@ -535,6 +535,7 @@
 		2DDD8D9124867588006D21D9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2D74B605244D05E70009C4CE /* HomeView.swift */,
 				2DB0BFAA245F8B7F0057DCE5 /* Header&Footer */,
 				2D74B60C244D217C0009C4CE /* Cells */,
 			);
@@ -544,6 +545,7 @@
 		2DDD8D9224867596006D21D9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2D6AA7F724C3BA3400A99CD9 /* Main */,
 				2D74B60B244D215C0009C4CE /* SectionsControllers */,
 			);
 			path = Controllers;
@@ -612,7 +614,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DD8281C24299159004F2738 /* LaunchScreen.storyboard in Resources */,
-				2D0D987C245854FC0021CAFA /* CategoryCollectionViewCell.xib in Resources */,
 				2D27371A24BE44DE007F2433 /* Colors.xcassets in Resources */,
 				2DAD66B924338F6F00D5D533 /* Gotu-Regular.ttf in Resources */,
 				2DB0BFB6245F973D0057DCE5 /* FooterView.xib in Resources */,
@@ -620,7 +621,6 @@
 				2DD2A977242A0330004E4E38 /* Localizable.strings in Resources */,
 				2DB0BFAE245F8BEF0057DCE5 /* HeaderView.xib in Resources */,
 				2D936EFA24329F680038CA9C /* SplashViewController.xib in Resources */,
-				2D9208002454DF7700D6BAC3 /* ChannelViewController.xib in Resources */,
 				2D662FD3244E563000023287 /* ChannelsViewController.xib in Resources */,
 				2D9C517A244EFCBA0077BF3C /* Episodes.Success.json in Resources */,
 				2DD8281924299159004F2738 /* Assets.xcassets in Resources */,

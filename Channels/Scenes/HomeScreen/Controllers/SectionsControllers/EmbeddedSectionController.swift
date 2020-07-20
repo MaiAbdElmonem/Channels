@@ -32,10 +32,10 @@ final class EmbeddedSectionController: ListSectionController {
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
-      guard let cell = collectionContext?.dequeueReusableCell(withNibName: "EpisodesCollectionViewCell", bundle: nil,
-                                                              for: self,
-                                                              at: index) as? EpisodesCollectionViewCell else {
-                  fatalError("err in episode cell")
+      guard let cell = collectionContext?.dequeueReusableCell(
+        of: EpisodesCollectionViewCell.self,
+        for: self, at: index) as? EpisodesCollectionViewCell else {
+          fatalError("err in episode cell")
       }
         guard let media = eposides?.items?[index] as? Media else { return UICollectionViewCell() }
 

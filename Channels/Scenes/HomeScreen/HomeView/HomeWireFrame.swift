@@ -13,7 +13,7 @@ class HomeModule {
 
     class func createModule() -> UIViewController {
 
-        let view = ChannelViewController(nibName: "ChannelViewController", bundle: nil)
+        let view = ChannelViewController()
         let model = HomeModel()
         let presenter = HomePresenter(view: view, model: model)
         view.setPresenter(presenter: presenter)

@@ -33,16 +33,19 @@ extension HomeSectionController: ListSupplementaryViewSource {
   private func homeHeaderView(atIndex index: Int) -> UICollectionReusableView {
     guard let view = collectionContext?.dequeueReusableSupplementaryView(
       ofKind: UICollectionView.elementKindSectionHeader,
-      for: self, nibName: "HeaderView", bundle: nil,
-      at: index) as? HeaderView else {
+      for: self, class: HeaderView.self, at: index)
+      as? HeaderView else {
         fatalError("No section header")
     }
+    
     if ((getSectionHeaderType() as? [Media]) != nil) {
       view.configureEpisodeHeader()
       return view
+      
     } else if ((getSectionHeaderType() as? [Category]) != nil) {
       view.configureCategoryHeader()
       return view
+      
     } else {
       guard let channelHeaders = getSectionHeaderType()?[index] as? Channel else { return UICollectionViewCell() }
       view.configure(model: channelHeaders)
@@ -52,10 +55,10 @@ extension HomeSectionController: ListSupplementaryViewSource {
   
   private func homeFooterView(atIndex index: Int) -> UICollectionReusableView {
     guard let view = collectionContext?.dequeueReusableSupplementaryView(
-      ofKind: UICollectionView.elementKindSectionHeader,
-      for: self, nibName: "FooterView", bundle: nil,
-      at: index) as? FooterView else {
-        fatalError("no categories section header")
+      ofKind: UICollectionView.elementKindSectionFooter,
+      for: self, class: FooterView.self, at: index)
+      as? FooterView else {
+        fatalError("No Footer")
     }
     return view
   }

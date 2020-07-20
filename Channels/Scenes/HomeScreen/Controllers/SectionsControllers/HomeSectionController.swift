@@ -68,13 +68,15 @@ class HomeSectionController: ListSectionController {
     let width = collectionContext?.containerSize.width ?? 0
     let height = collectionContext?.containerSize.height ?? 0
     if let sectionType = getSectionType() as? [Media] {
-      self.inset = UIEdgeInsets(top: 10, left: 30, bottom: 0, right: 0)
       if sectionType.first?.type == "video" {
+        self.inset = UIEdgeInsets(top: 10, left: 370, bottom: 0, right: 0)
         return CGSize(width: width * 2, height: height / 2.5)
       } else {
+        self.inset = UIEdgeInsets(top: 10, left: 30, bottom: 0, right: 0)
         return CGSize(width: width, height: height / 2)
       }
     }
+    
     if (getSectionType() as? [Category]) != nil {
       self.inset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
       self.minimumLineSpacing = 20
